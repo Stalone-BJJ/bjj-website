@@ -1,7 +1,7 @@
 import React from "react";
 import { NavBar } from "~/components/navbar";
 
-const Home = () => {
+const News = () => {
   return (
     <React.Fragment>
       <NavBar></NavBar>
@@ -9,4 +9,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default News;
