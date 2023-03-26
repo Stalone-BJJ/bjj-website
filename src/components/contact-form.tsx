@@ -1,0 +1,182 @@
+import { useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
+
+interface ContactFormData {
+  firstname: string;
+  surname: string;
+  phoneNumber: string;
+  interestedClass: string;
+  email: string;
+  additionalInformation: string;
+}
+
+export const ContactForm = () => {
+  const [firstname, setFirstname] = useState("");
+  const [surname, setSurname] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [interestedClass, setInterestedClass] = useState("");
+  const [email, setEmail] = useState("");
+  const [additionalInformation, setAdditionalInformation] = useState("");
+
+  const [state, handleSubmit] = useForm("mbjeaqoj");
+
+  // Code below removed because we are using formspree - this may change in the future so keeping this code here.
+  // Maybe explore other email providers.
+
+  // const handleFormSubmission = (event: React.SyntheticEvent) => {
+  //   event.preventDefault();
+
+  //   const formData: ContactFormData = {
+  //     firstname: firstname,
+  //     surname: surname,
+  //     phoneNumber: phoneNumber,
+  //     interestedClass: interestedClass,
+  //     email: email,
+  //     additionalInformation: additionalInformation,
+  //   };
+
+  //   // Send email to professor here!
+  //   console.log(formData);
+
+  //   setSurname("");
+  //   setFirstname("");
+  //   setPhoneNumber("");
+  //   setInterestedClass("");
+  //   setEmail("");
+  //   setAdditionalInformation("");
+  // };
+
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
+
+  return (
+    <form
+      action="https://formspree.io/f/mbjeaqoj"
+      method="POST"
+      onSubmit={() => handleSubmit}
+      // onSubmit={(event) => handleFormSubmission(event)}
+    >
+      <div className="mb-6 grid gap-6 md:grid-cols-2">
+        <div>
+          <label
+            htmlFor="first_name"
+            className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          >
+            First name
+          </label>
+          <input
+            value={firstname}
+            onChange={(e) => setFirstname(e.target.value)}
+            type="text"
+            id="first_name"
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            placeholder="John"
+            required
+            name="firstName"
+          ></input>
+        </div>
+        <div>
+          <label
+            htmlFor="last_name"
+            className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          >
+            Last name
+          </label>
+          <input
+            value={surname}
+            onChange={(e) => setSurname(e.target.value)}
+            type="text"
+            id="last_name"
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            placeholder="Doe"
+            required
+            name="Surname"
+          ></input>
+        </div>
+        <div>
+          <label
+            htmlFor="phone"
+            className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          >
+            Phone number
+          </label>
+          <input
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            type="tel"
+            id="phone"
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            placeholder="07123456789"
+            required
+            name="phoneNumber"
+          ></input>
+        </div>
+        <div>
+          <label
+            htmlFor="class"
+            className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          >
+            Class
+          </label>
+          <select
+            onChange={(e) => setInterestedClass(e.target.value)}
+            id="class"
+            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+            required
+            defaultValue={interestedClass}
+            name="interestedClass"
+          >
+            <option disabled value={interestedClass}>
+              -- Select Option --
+            </option>
+            <option value="All Level Class">All Levels Class</option>
+            <option value="Womans Only Class">Womens Only Class</option>
+            <option value="Kids Class">Kids Class</option>
+            <option value="Fundamental Class">Fundamental Class</option>
+          </select>
+        </div>
+      </div>
+      <div className="mb-6">
+        <label
+          htmlFor="email"
+          className="mb-2 block text-sm font-medium text-gray-900 text-black"
+        >
+          Email address
+        </label>
+        <input
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          type="email"
+          id="email"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          placeholder="john.doe@email.com"
+          required
+        ></input>
+      </div>
+      <div className="mb-6">
+        <label
+          htmlFor="Additional Info"
+          className="mb-2 block text-sm font-medium text-gray-900 text-black"
+        >
+          Additional Information / Questions
+        </label>
+        <textarea
+          name="additionalInfo"
+          value={additionalInformation}
+          onChange={(e) => setAdditionalInformation(e.target.value)}
+          id="addintional-info"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          placeholder="Feel free to provide more information or ask any questions here."
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        className="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
+      >
+        Submit
+      </button>
+    </form>
+  );
+};
