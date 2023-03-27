@@ -23,8 +23,41 @@ const Home = () => {
         </div>
         <div className="ml-2 h-3/6 w-6/12 text-center">
           <SectionHeading sectionHeadingText="Why Us?" />
-          <div className="flex">
-            <Image height="200" width="200" src="/bjj2.jpg" alt="alt tag" />
+          <div className="">
+            <div className="mb-5 flex justify-center">
+              <Image
+                height="200"
+                width="200"
+                src="/bjj2.jpg"
+                alt="alt tag"
+                className="m-1"
+              />
+              <Image
+                height="200"
+                width="200"
+                src="/bjj2.jpg"
+                alt="alt tag"
+                className="m-1"
+              />
+              <Image
+                height="200"
+                width="200"
+                src="/bjj2.jpg"
+                alt="alt tag"
+                className="m-1"
+              />
+            </div>
+            <div>
+              <p>
+                Established in 2017 by multiple championship medalling black
+                belt Matthew Callaghan. Gracie Barra Chorley has a fantastic
+                location served by being directly opposite a large free public
+                car park, next to the train station and very close to the M61
+                motorway junction. Gracie Barra Chorley offers classes for
+                children 5 years old and up all the way through to adults
+                beginner classes and competitive training for those who want it.
+              </p>
+            </div>
           </div>
         </div>
       </div>
