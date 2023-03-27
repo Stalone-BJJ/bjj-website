@@ -1,7 +1,7 @@
 export const Subheading = ({ subheadingText }) => {
   return (
-    <div>
-      <h2>{subheadingText}</h2>
+    <div className="mb-5">
+      <p className="text-lg font-normal lg:text-xl">{subheadingText}</p>
     </div>
   );
 };

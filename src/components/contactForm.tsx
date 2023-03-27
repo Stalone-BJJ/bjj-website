@@ -17,7 +17,6 @@ export const ContactForm = () => {
   const [interestedClass, setInterestedClass] = useState("");
   const [email, setEmail] = useState("");
   const [additionalInformation, setAdditionalInformation] = useState("");
-
   const [state, handleSubmit] = useForm("mbjeaqoj");
 
   // Code below removed because we are using formspree - this may change in the future so keeping this code here.
@@ -45,10 +44,6 @@ export const ContactForm = () => {
   //   setEmail("");
   //   setAdditionalInformation("");
   // };
-
-  if (state.succeeded) {
-    return <p>Thanks for getting in contact, we will get back to you soon.</p>;
-  }
 
   return (
     <form
