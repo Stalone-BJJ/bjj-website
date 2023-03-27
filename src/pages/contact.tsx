@@ -4,6 +4,7 @@ import { Footer } from "~/components/footer";
 import { Heading } from "~/components/heading";
 import { NavBar } from "~/components/navbar";
 import { Subheading } from "~/components/subheading";
+import { Map } from "~/components/map";
 
 const Contact = () => {
   return (
@@ -17,7 +18,9 @@ const Contact = () => {
         <div className=" mr-2 h-3/6 w-6/12" id="contact-form">
           <ContactForm />
         </div>
-        <div className="ml-2 h-3/6 w-6/12 bg-slate-200">Map Section</div>
+        <div className="ml-2 h-3/6 w-6/12 bg-slate-200">
+          <Map />
+        </div>
       </div>
       <Footer />
     </React.Fragment>

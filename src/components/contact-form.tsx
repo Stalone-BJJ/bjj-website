@@ -47,7 +47,7 @@ export const ContactForm = () => {
   // };
 
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return <p>Thanks for getting in contact, we will get back to you soon.</p>;
   }
 
   return (
