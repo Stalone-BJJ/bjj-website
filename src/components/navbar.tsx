@@ -1,14 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const NavBar = () => {
   return (
     <nav className="border-gray-200 bg-white px-2 py-2.5 dark:bg-gray-900 sm:px-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <Link href="/" className="flex items-center">
-          <img
+          <Image
             src="https://img.logoipsum.com/290.svg"
-            className="mr-3 h-6 sm:h-9"
-            alt="Flowbite Logo"
+            width={100}
+            height={100}
+            alt="BJJ Logo"
           />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             Chorley BJJ Academy
@@ -74,7 +76,7 @@ export const NavBar = () => {
             </li>
             <li>
               <Link
-                href="/timetable"
+                href="/schedule"
                 className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
               >
                 Schedule

@@ -1,4 +1,5 @@
 import React from "react";
+import { ClassTimetable } from "~/components/classTimetable";
 import { Footer } from "~/components/footer";
 import { Heading } from "~/components/heading";
 import { NavBar } from "~/components/navbar";
@@ -12,8 +13,8 @@ const Schedule = () => {
         <Heading headingText="Schedule" />
         <Subheading subheadingText="Our Schedule and Class Selection" />
       </div>
-      <div className="m-20 flex justify-center">
-        <p className="">Schedule</p>
+      <div className="m-20">
+        <ClassTimetable />
       </div>
       <Footer />
     </React.Fragment>
