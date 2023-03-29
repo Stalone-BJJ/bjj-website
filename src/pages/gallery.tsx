@@ -6,12 +6,12 @@ import Image from "next/image";
 import { NavBar } from "~/components/navbar";
 import { SectionHeading } from "~/components/sectionHeading";
 
-const Gallary = () => {
+const Gallery = () => {
   return (
     <React.Fragment>
       <NavBar />
       <div className="m-20 text-center">
-        <Heading headingText="Gallary" />
+        <Heading headingText="Gallery" />
         <Subheading subheadingText="Why not check out some photos of us dismembering oponents" />
       </div>
       <div className="m-20 flex ">
@@ -33,4 +33,4 @@ const Gallary = () => {
   );
 };
 
-export default Gallary;
+export default Gallery;

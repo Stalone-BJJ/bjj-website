@@ -11,7 +11,7 @@ const News = () => {
     <React.Fragment>
       <NavBar />
       <div className="m-20 text-center">
-        <Heading headingText="Gallary" />
+        <Heading headingText="News" />
         <Subheading subheadingText="Why not check out some photos of us dismembering oponents" />
       </div>
       <div className="m-20 flex ">
