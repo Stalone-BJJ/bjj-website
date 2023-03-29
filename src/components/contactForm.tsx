@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useForm, ValidationError } from "@formspree/react";
 
 interface ContactFormData {
   firstname: string;
@@ -17,41 +16,31 @@ export const ContactForm = () => {
   const [interestedClass, setInterestedClass] = useState("");
   const [email, setEmail] = useState("");
   const [additionalInformation, setAdditionalInformation] = useState("");
-  const [state, handleSubmit] = useForm("mbjeaqoj");
 
-  // Code below removed because we are using formspree - this may change in the future so keeping this code here.
-  // Maybe explore other email providers.
+  const handleFormSubmission = (event: React.SyntheticEvent) => {
+    event.preventDefault();
 
-  // const handleFormSubmission = (event: React.SyntheticEvent) => {
-  //   event.preventDefault();
+    const formData: ContactFormData = {
+      firstname: firstname,
+      surname: surname,
+      phoneNumber: phoneNumber,
+      interestedClass: interestedClass,
+      email: email,
+      additionalInformation: additionalInformation,
+    };
 
-  //   const formData: ContactFormData = {
-  //     firstname: firstname,
-  //     surname: surname,
-  //     phoneNumber: phoneNumber,
-  //     interestedClass: interestedClass,
-  //     email: email,
-  //     additionalInformation: additionalInformation,
-  //   };
+    console.log(formData);
 
-  //   // Send email to professor here!
-  //   console.log(formData);
-
-  //   setSurname("");
-  //   setFirstname("");
-  //   setPhoneNumber("");
-  //   setInterestedClass("");
-  //   setEmail("");
-  //   setAdditionalInformation("");
-  // };
+    setSurname("");
+    setFirstname("");
+    setPhoneNumber("");
+    setInterestedClass("");
+    setEmail("");
+    setAdditionalInformation("");
+  };
 
   return (
-    <form
-      action="https://formspree.io/f/mbjeaqoj"
-      method="POST"
-      onSubmit={() => handleSubmit}
-      // onSubmit={(event) => handleFormSubmission(event)}
-    >
+    <form onSubmit={(event) => handleFormSubmission(event)}>
       <div className="mb-6 grid gap-6 md:grid-cols-2">
         <div>
           <label
