@@ -1,7 +1,5 @@
-export const Subheading = ({ subheadingText }) => {
-  return (
-    <div className="mb-5">
-      <p className="text-lg font-normal lg:text-xl">{subheadingText}</p>
-    </div>
-  );
-};
+import { type PropsWithChildren } from "react";
+
+export const Subheading = ({ children }: PropsWithChildren) => (
+  <h2 className="m-5 text-4xl">{children}</h2>
+);

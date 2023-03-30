@@ -4,63 +4,37 @@ import { Heading } from "~/components/heading";
 import { NavBar } from "~/components/navbar";
 import { Subheading } from "~/components/subheading";
 import Image from "next/image";
-import { SectionHeading } from "~/components/sectionHeading";
-import { ContentSection } from "~/components/contentSection";
 
 const Home = () => {
   return (
     <React.Fragment>
       <NavBar />
-      <div className="m-20 text-center">
-        <Heading headingText="Chorley BJJ Academy" />
-        <Subheading subheadingText="Taking Limbs Since 1990" />
-      </div>
-      <div className="m-20 flex ">
-        <ContentSection>
-          <SectionHeading sectionHeadingText="Our School" />
-          <div className="flex">
-            <Image height="200" width="200" src="/bjj1.jpg" alt="alt tag" />
+      <div className="relative h-[780px]">
+        <Image
+          src="/images/hero-banner.jpg"
+          alt="Hero"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+        <div className="absolute top-0 mt-10 w-full text-center text-white">
+          <Heading>STALONE BJJ ACADEMY</Heading>
+          <Subheading>EST. 2017</Subheading>
+        </div>
+        <div className="absolute top-0 flex h-full w-full items-center justify-around text-white">
+          <div>
+            <h2 className="text-5xl font-bold">
+              JIU-JITSU
+              <br />
+              <span className="italic">FOR EVERYONE.</span>
+            </h2>
+            <p className="text-xl">
+              Getting started at Stalone BJJ Academy is easy.
+              <br />
+              Book your free trial class today.
+            </p>
           </div>
-        </ContentSection>
-        <ContentSection>
-          <SectionHeading sectionHeadingText="Why Us?" />
-          <div className="">
-            <div className="mb-5 flex justify-center">
-              <Image
-                height="200"
-                width="200"
-                src="/bjj2.jpg"
-                alt="alt tag"
-                className="m-1"
-              />
-              <Image
-                height="200"
-                width="200"
-                src="/bjj2.jpg"
-                alt="alt tag"
-                className="m-1"
-              />
-              <Image
-                height="200"
-                width="200"
-                src="/bjj2.jpg"
-                alt="alt tag"
-                className="m-1"
-              />
-            </div>
-            <div>
-              <p>
-                Established in 2017 by multiple championship medalling black
-                belt Matthew Callaghan. Gracie Barra Chorley has a fantastic
-                location served by being directly opposite a large free public
-                car park, next to the train station and very close to the M61
-                motorway junction. Gracie Barra Chorley offers classes for
-                children 5 years old and up all the way through to adults
-                beginner classes and competitive training for those who want it.
-              </p>
-            </div>
-          </div>
-        </ContentSection>
+          <div>Form within here</div>
+        </div>
       </div>
       <Footer />
     </React.Fragment>
