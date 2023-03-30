@@ -1,12 +1,12 @@
 export const ClassTimetable = () => {
-  const tableStyles = "w-screen table-fixed";
+  const tableStyles = "w-9/12 table-fixed";
   const theadStyles = "";
   const trStyles = "h-16";
-  const thStyles = "py-6 border bg-slate-300 ";
-  const tdStyles = "py-6 text-center border text-sm";
+  const thStyles = "py-6 border bg-slate-300";
+  const tdStyles = "py-4 text-center border text-sm";
 
   return (
-    <div className="">
+    <div className="flex justify-center">
       <table className={tableStyles}>
         <thead className={theadStyles}>
           <tr className={trStyles}>
@@ -108,7 +108,7 @@ export const ClassTimetable = () => {
               19:00 - 20:00<br></br>ADVANCED GI
             </td>
             <td className={tdStyles + " bg-violet-300"}>
-              19:00 - 20:00<br></br>LIVE<br></br>TRAINING GI
+              19:00 - 20:00<br></br>LIVE TRAINING<br></br>GI
             </td>
             <td className={tdStyles + " bg-violet-300"}>
               19:00 - 20:00<br></br>COMPETITION<br></br>TRAINING
