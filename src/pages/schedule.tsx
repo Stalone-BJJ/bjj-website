@@ -13,7 +13,7 @@ const Schedule = () => {
         <Heading headingText="Schedule" />
         <Subheading subheadingText="Our Schedule and Class Selection" />
       </div>
-      <div className="m-20">
+      <div className="m-20 flex justify-center">
         <ClassTimetable />
       </div>
       <Footer />

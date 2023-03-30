@@ -1,110 +1,141 @@
-import Image from "next/image";
-
 export const ClassTimetable = () => {
+  const tableStyles = "w-70%";
+  const theadStyles = "";
+  const trStyles = "h-16";
+  const thStyles = "px-20 py-6 border bg-slate-300 ";
+  const tdStyles = "py-6 px-10 text-center";
+
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table className="w-full text-sm text-gray-500 dark:text-gray-400">
-        <thead className="text-xs uppercase text-gray-700 dark:text-gray-400">
-          <tr>
-            <th scope="col" className="bg-gray-50 px-6 py-3 dark:bg-gray-800">
+    <div className="h-screen w-screen">
+      <table className={tableStyles}>
+        <thead className={theadStyles}>
+          <tr className={trStyles}>
+            <th scope="col" className={thStyles}>
               Monday
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className={thStyles}>
               Tuesday
             </th>
-            <th scope="col" className="bg-gray-50 px-6 py-3 dark:bg-gray-800">
+            <th scope="col" className={thStyles}>
               Wednesday
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className={thStyles}>
               Thursday
             </th>
-            <th scope="col" className="bg-gray-50 px-6 py-3 dark:bg-gray-800">
+            <th scope="col" className={thStyles}>
               Friday
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className={thStyles}>
               Saturday
-            </th>
-            <th scope="col" className="bg-gray-50 px-6 py-3 dark:bg-gray-800">
-              Sunday
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr className="border-b border-t border-gray-200 dark:border-gray-700">
-            <th
-              scope="row"
-              className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
-            >
-              Apple MacBook Pro 17
-            </th>
-            <td className="px-6 py-4">Silver</td>
-            <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800">Laptop</td>
-            <td className="px-6 py-4">$2999</td>
-            <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800"></td>
-            <td className="px-6 py-4">
-              <Image src="/bjj1.jpg" alt="bjj" width={100} height={100}></Image>
+          <tr className={trStyles}>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}>
+              06:00 - 07:00<br></br>EARLY BIRDS<br></br>ALL LEVELS GI
             </td>
-            <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800">Laptop</td>
-          </tr>
-          <tr className="border-b border-gray-200 dark:border-gray-700">
-            <th
-              scope="row"
-              className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
-            >
-              Microsoft Surface Pro
-            </th>
-            <td className="px-6 py-4">White</td>
-            <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800">Laptop PC</td>
-            <td className="px-6 py-4">$1999</td>
-          </tr>
-          <tr className="border-b border-gray-200 dark:border-gray-700">
-            <th
-              scope="row"
-              className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
-            >
-              Magic Mouse 2
-            </th>
-            <td className="px-6 py-4">Black</td>
-            <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800">
-              Accessories
+            <td className={tdStyles}>
+              06:00 - 07:00<br></br>EARLY BIRDS<br></br>ALL LEVELS GI
             </td>
-            <td className="px-6 py-4">$99</td>
+            <td className={tdStyles}>
+              06:00 - 07:00<br></br>EARLY BIRDS<br></br>ALL LEVELS GI
+            </td>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}></td>
           </tr>
-          <tr className="border-b border-gray-200 dark:border-gray-700">
-            <th
-              scope="row"
-              className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
-            >
-              Google Pixel Phone
-            </th>
-            <td className="px-6 py-4">Gray</td>
-            <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800">Phone</td>
-            <td className="px-6 py-4">$799</td>
+          <tr className={trStyles}>
+            <td className={tdStyles}>
+              10:00 - 11:00<br></br>ALL LEVELS GI
+            </td>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}>
+              10:00 - 11:00<br></br>ALL LEVELS GI
+            </td>
+            <td className={tdStyles}></td>
           </tr>
-          <tr className="border-b border-gray-200 dark:border-gray-700">
-            <th
-              scope="row"
-              className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
-            >
-              Apple Watch 5
-            </th>
-            <td className="px-6 py-4">Red</td>
-            <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800">Wearables</td>
-            <td className="px-6 py-4">$999</td>
+          <tr className={trStyles}>
+            <td className={tdStyles}>
+              11:00 - 12:00<br></br>COMPETITION<br></br>SPARRING GI
+            </td>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}>
+              11:00 - 12:00<br></br>COMPETITION<br></br>SPARRING GI
+            </td>
+            <td className={tdStyles}>
+              12:00 - 12:50<br></br>KIDS GI
+            </td>
           </tr>
-          <tr>
-            <th
-              scope="row"
-              className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
-            >
-              Apple Watch 5
-            </th>
-            <td className="px-6 py-4">Red</td>
-            <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800">Wearables</td>
-            <td className="px-6 py-4">$999</td>
-            <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800">Wearables</td>
-            <td className="px-6 py-4">Red</td>
-            <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800">Wearables</td>
+          <tr className={trStyles}>
+            <td className={tdStyles}>
+              17:00 - 17:45<br></br>KIDS GI
+            </td>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}>
+              17:00 - 17:45<br></br>KIDS GI
+            </td>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}>
+              13:00 - 14:00<br></br>ALL LEVELS GI
+            </td>
+          </tr>
+          <tr className={trStyles}>
+            <td className={tdStyles}>
+              18:00 - 19:00<br></br>FUNDAMENTALS GI
+            </td>
+            <td className={tdStyles}>
+              18:00 -19:00<br></br>ADVANCED GI
+            </td>
+            <td className={tdStyles}>
+              18:00 - 19:00<br></br>FUNDAMENTALS<br></br>NO GI
+            </td>
+            <td className={tdStyles}>
+              18:00 -19:00<br></br>ADVANCED<br></br>NO GI
+            </td>
+            <td className={tdStyles}>
+              17:30 - 18:30<br></br>WOMANS&apos;S<br></br>CLASS
+            </td>
+            <td className={tdStyles}></td>
+          </tr>
+          <tr className={trStyles}>
+            <td className={tdStyles}>
+              19:00 - 20:00<br></br>ADVANCED GI
+            </td>
+            <td className={tdStyles}>
+              19:00 - 20:00<br></br>LIVE<br></br>TRAINING GI
+            </td>
+            <td className={tdStyles}>
+              19:00 - 20:00<br></br>COMPETITION<br></br>TRAINING
+            </td>
+            <td className={tdStyles}>
+              19:00 - 20:00<br></br>LIVE TRAINING<br></br>NO GI
+            </td>
+            <td className={tdStyles}>
+              18:30 - 19:30<br></br>ALL LEVELS GI
+            </td>
+            <td className={tdStyles}></td>
+          </tr>
+          <tr className={trStyles}>
+            <td className={tdStyles}>
+              20:00 - 21:00<br></br>LIVE TRAINING<br></br>GI
+            </td>
+            <td className={tdStyles}>
+              19:30 - 20:30<br></br>FUNDAMENTALS<br></br>GI
+            </td>
+            <td className={tdStyles}></td>
+            <td className={tdStyles}>
+              19:30 - 20:30<br></br>ALL LEVELS<br></br>GI
+            </td>
+            <td className={tdStyles}>
+              19:30 - 20:30<br></br>OPEN MAT
+            </td>
+            <td className={tdStyles}></td>
           </tr>
         </tbody>
       </table>
