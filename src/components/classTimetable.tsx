@@ -1,12 +1,12 @@
 export const ClassTimetable = () => {
-  const tableStyles = "w-70%";
+  const tableStyles = "w-screen table-fixed";
   const theadStyles = "";
   const trStyles = "h-16";
-  const thStyles = "px-20 py-6 border bg-slate-300 ";
-  const tdStyles = "py-6 px-10 text-center";
+  const thStyles = "py-6 border bg-slate-300 ";
+  const tdStyles = "py-6 text-center border text-sm";
 
   return (
-    <div className="h-screen w-screen">
+    <div className="">
       <table className={tableStyles}>
         <thead className={theadStyles}>
           <tr className={trStyles}>
@@ -33,106 +33,106 @@ export const ClassTimetable = () => {
         <tbody>
           <tr className={trStyles}>
             <td className={tdStyles}></td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-cyan-200"}>
               06:00 - 07:00<br></br>EARLY BIRDS<br></br>ALL LEVELS GI
             </td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-cyan-200"}>
               06:00 - 07:00<br></br>EARLY BIRDS<br></br>ALL LEVELS GI
             </td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-cyan-200"}>
               06:00 - 07:00<br></br>EARLY BIRDS<br></br>ALL LEVELS GI
             </td>
             <td className={tdStyles}></td>
             <td className={tdStyles}></td>
           </tr>
           <tr className={trStyles}>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-cyan-200"}>
               10:00 - 11:00<br></br>ALL LEVELS GI
             </td>
             <td className={tdStyles}></td>
             <td className={tdStyles}></td>
             <td className={tdStyles}></td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-cyan-200"}>
               10:00 - 11:00<br></br>ALL LEVELS GI
             </td>
             <td className={tdStyles}></td>
           </tr>
           <tr className={trStyles}>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-violet-300"}>
               11:00 - 12:00<br></br>COMPETITION<br></br>SPARRING GI
             </td>
             <td className={tdStyles}></td>
             <td className={tdStyles}></td>
             <td className={tdStyles}></td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-violet-300"}>
               11:00 - 12:00<br></br>COMPETITION<br></br>SPARRING GI
             </td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-lime-300"}>
               12:00 - 12:50<br></br>KIDS GI
             </td>
           </tr>
           <tr className={trStyles}>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-lime-300"}>
               17:00 - 17:45<br></br>KIDS GI
             </td>
             <td className={tdStyles}></td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-lime-300"}>
               17:00 - 17:45<br></br>KIDS GI
             </td>
             <td className={tdStyles}></td>
             <td className={tdStyles}></td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-cyan-200"}>
               13:00 - 14:00<br></br>ALL LEVELS GI
             </td>
           </tr>
           <tr className={trStyles}>
-            <td className={tdStyles}>
-              18:00 - 19:00<br></br>FUNDAMENTALS GI
+            <td className={tdStyles + " bg-cyan-200"}>
+              18:00 - 19:00<br></br>FUNDAMENTALS<br></br>GI
             </td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-violet-300"}>
               18:00 -19:00<br></br>ADVANCED GI
             </td>
-            <td className={tdStyles}>
-              18:00 - 19:00<br></br>FUNDAMENTALS<br></br>NO GI
+            <td className={tdStyles + " bg-cyan-200"}>
+              18:00 - 19:00<br></br>FUNDAMENTALS<br></br>NO-GI
             </td>
-            <td className={tdStyles}>
-              18:00 -19:00<br></br>ADVANCED<br></br>NO GI
+            <td className={tdStyles + " bg-violet-300"}>
+              18:00 -19:00<br></br>ADVANCED<br></br>NO-GI
             </td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-cyan-200"}>
               17:30 - 18:30<br></br>WOMANS&apos;S<br></br>CLASS
             </td>
             <td className={tdStyles}></td>
           </tr>
           <tr className={trStyles}>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-violet-300"}>
               19:00 - 20:00<br></br>ADVANCED GI
             </td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-violet-300"}>
               19:00 - 20:00<br></br>LIVE<br></br>TRAINING GI
             </td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-violet-300"}>
               19:00 - 20:00<br></br>COMPETITION<br></br>TRAINING
             </td>
-            <td className={tdStyles}>
-              19:00 - 20:00<br></br>LIVE TRAINING<br></br>NO GI
+            <td className={tdStyles + " bg-violet-300"}>
+              19:00 - 20:00<br></br>LIVE TRAINING<br></br>NO-GI
             </td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-cyan-200"}>
               18:30 - 19:30<br></br>ALL LEVELS GI
             </td>
             <td className={tdStyles}></td>
           </tr>
           <tr className={trStyles}>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-violet-300"}>
               20:00 - 21:00<br></br>LIVE TRAINING<br></br>GI
             </td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-cyan-200"}>
               19:30 - 20:30<br></br>FUNDAMENTALS<br></br>GI
             </td>
             <td className={tdStyles}></td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-cyan-200"}>
               19:30 - 20:30<br></br>ALL LEVELS<br></br>GI
             </td>
-            <td className={tdStyles}>
+            <td className={tdStyles + " bg-cyan-200"}>
               19:30 - 20:30<br></br>OPEN MAT
             </td>
             <td className={tdStyles}></td>
