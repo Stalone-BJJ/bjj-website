@@ -41,87 +41,67 @@ export const ContactForm = () => {
 
   return (
     <form onSubmit={(event) => handleFormSubmission(event)}>
-      <div className="mb-6 grid gap-6 md:grid-cols-2">
-        <div>
-          <label
-            htmlFor="first_name"
-            className="mb-2 block text-sm font-medium text-gray-900 text-black"
-          >
-            First name
-          </label>
-          <input
-            value={firstname}
-            onChange={(e) => setFirstname(e.target.value)}
-            type="text"
-            id="first_name"
-            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-            placeholder="John"
-            required
-            name="firstName"
-          ></input>
-        </div>
-        <div>
-          <label
-            htmlFor="last_name"
-            className="mb-2 block text-sm font-medium text-gray-900 text-black"
-          >
-            Last name
-          </label>
-          <input
-            value={surname}
-            onChange={(e) => setSurname(e.target.value)}
-            type="text"
-            id="last_name"
-            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-            placeholder="Doe"
-            required
-            name="Surname"
-          ></input>
-        </div>
-        <div>
-          <label
-            htmlFor="phone"
-            className="mb-2 block text-sm font-medium text-gray-900 text-black"
-          >
-            Phone number
-          </label>
-          <input
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            type="tel"
-            id="phone"
-            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-            placeholder="07123456789"
-            required
-            name="phoneNumber"
-          ></input>
-        </div>
-        <div>
-          <label
-            htmlFor="class"
-            className="mb-2 block text-sm font-medium text-gray-900 text-black"
-          >
-            Class
-          </label>
-          <select
-            onChange={(e) => setInterestedClass(e.target.value)}
-            id="class"
-            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-            required
-            defaultValue={interestedClass}
-            name="interestedClass"
-          >
-            <option disabled value={interestedClass}>
-              -- Select Option --
-            </option>
-            <option value="All Level Class">All Levels Class</option>
-            <option value="Womans Only Class">Womens Only Class</option>
-            <option value="Kids Class">Kids Class</option>
-            <option value="Fundamental Class">Fundamental Class</option>
-          </select>
-        </div>
+      <div className="mb-4">
+        <label
+          htmlFor="class"
+          className="mb-2 block text-sm font-medium text-gray-900 text-black"
+        >
+          Class
+        </label>
+        <select
+          onChange={(e) => setInterestedClass(e.target.value)}
+          id="class"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          required
+          defaultValue={interestedClass}
+          name="interestedClass"
+        >
+          <option disabled value={interestedClass}>
+            -- Select Option --
+          </option>
+          <option value="All Level Class">All Levels Class</option>
+          <option value="Womans Only Class">Womens Only Class</option>
+          <option value="Kids Class">Kids Class</option>
+          <option value="Fundamental Class">Fundamental Class</option>
+        </select>
       </div>
-      <div className="mb-6">
+      <div className="mb-4">
+        <label
+          htmlFor="name"
+          className="mb-2 block text-sm font-medium text-gray-900 text-black"
+        >
+          Name
+        </label>
+        <input
+          value={firstname}
+          onChange={(e) => setFirstname(e.target.value)}
+          type="text"
+          id="name"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          placeholder="John Doe"
+          required
+          name="firstName"
+        />
+      </div>
+      <div className="mb-4">
+        <label
+          htmlFor="phone"
+          className="mb-2 block text-sm font-medium text-gray-900 text-black"
+        >
+          Phone number
+        </label>
+        <input
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          type="tel"
+          id="phone"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          placeholder="07123456789"
+          required
+          name="phoneNumber"
+        />
+      </div>
+      <div className="mb-4">
         <label
           htmlFor="email"
           className="mb-2 block text-sm font-medium text-gray-900 text-black"
@@ -137,9 +117,9 @@ export const ContactForm = () => {
           className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
           placeholder="john.doe@email.com"
           required
-        ></input>
+        />
       </div>
-      <div className="mb-6">
+      <div className="mb-4">
         <label
           htmlFor="Additional Info"
           className="mb-2 block text-sm font-medium text-gray-900 text-black"
@@ -153,7 +133,7 @@ export const ContactForm = () => {
           id="addintional-info"
           className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
           placeholder="Feel free to provide more information or ask any questions here."
-        ></textarea>
+        />
       </div>
       <button
         type="submit"
