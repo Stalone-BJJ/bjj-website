@@ -4,7 +4,6 @@ import { Heading } from "~/components/heading";
 import { NavBar } from "~/components/navbar";
 import { SectionHeading } from "~/components/sectionHeading";
 import { Subheading } from "~/components/subheading";
-import Image from "next/image";
 import { ContentSection } from "~/components/contentSection";
 
 const News = () => {
@@ -12,8 +11,10 @@ const News = () => {
     <React.Fragment>
       <NavBar />
       <div className="m-20 text-center">
-        <Heading headingText="News" />
-        <Subheading subheadingText="Why not check out some photos of us dismembering oponents" />
+        <Heading>News</Heading>
+        <Subheading>
+          Why not check out some photos of us dismembering oponents
+        </Subheading>
       </div>
       <div className="m-20 flex ">
         <ContentSection>

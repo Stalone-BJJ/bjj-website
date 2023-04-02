@@ -6,25 +6,25 @@ export const ClassTimetable = () => {
       <table className="w-full text-sm text-gray-500 dark:text-gray-400">
         <thead className="text-xs uppercase text-gray-700 dark:text-gray-400">
           <tr>
-            <th scope="col" className="bg-gray-50 px-6 py-3 dark:bg-gray-800">
+            <th className="bg-gray-50 px-6 py-3 dark:bg-gray-800" scope="col">
               Monday
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th className="px-6 py-3" scope="col">
               Tuesday
             </th>
-            <th scope="col" className="bg-gray-50 px-6 py-3 dark:bg-gray-800">
+            <th className="bg-gray-50 px-6 py-3 dark:bg-gray-800" scope="col">
               Wednesday
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th className="px-6 py-3" scope="col">
               Thursday
             </th>
-            <th scope="col" className="bg-gray-50 px-6 py-3 dark:bg-gray-800">
+            <th className="bg-gray-50 px-6 py-3 dark:bg-gray-800" scope="col">
               Friday
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th className="px-6 py-3" scope="col">
               Saturday
             </th>
-            <th scope="col" className="bg-gray-50 px-6 py-3 dark:bg-gray-800">
+            <th className="bg-gray-50 px-6 py-3 dark:bg-gray-800" scope="col">
               Sunday
             </th>
           </tr>
@@ -32,8 +32,8 @@ export const ClassTimetable = () => {
         <tbody>
           <tr className="border-b border-t border-gray-200 dark:border-gray-700">
             <th
-              scope="row"
               className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
+              scope="row"
             >
               Apple MacBook Pro 17
             </th>
@@ -42,14 +42,14 @@ export const ClassTimetable = () => {
             <td className="px-6 py-4">$2999</td>
             <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800"></td>
             <td className="px-6 py-4">
-              <Image src="/bjj1.jpg" alt="bjj" width={100} height={100}></Image>
+              <Image alt="bjj" height={100} src="/bjj1.jpg" width={100}></Image>
             </td>
             <td className="bg-gray-50 px-6 py-4 dark:bg-gray-800">Laptop</td>
           </tr>
           <tr className="border-b border-gray-200 dark:border-gray-700">
             <th
-              scope="row"
               className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
+              scope="row"
             >
               Microsoft Surface Pro
             </th>
@@ -59,8 +59,8 @@ export const ClassTimetable = () => {
           </tr>
           <tr className="border-b border-gray-200 dark:border-gray-700">
             <th
-              scope="row"
               className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
+              scope="row"
             >
               Magic Mouse 2
             </th>
@@ -72,8 +72,8 @@ export const ClassTimetable = () => {
           </tr>
           <tr className="border-b border-gray-200 dark:border-gray-700">
             <th
-              scope="row"
               className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
+              scope="row"
             >
               Google Pixel Phone
             </th>
@@ -83,8 +83,8 @@ export const ClassTimetable = () => {
           </tr>
           <tr className="border-b border-gray-200 dark:border-gray-700">
             <th
-              scope="row"
               className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
+              scope="row"
             >
               Apple Watch 5
             </th>
@@ -94,8 +94,8 @@ export const ClassTimetable = () => {
           </tr>
           <tr>
             <th
-              scope="row"
               className="whitespace-nowrap bg-gray-50 px-6 py-4 font-medium text-gray-900 dark:bg-gray-800 dark:text-white"
+              scope="row"
             >
               Apple Watch 5
             </th>

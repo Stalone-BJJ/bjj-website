@@ -4,7 +4,6 @@ import { Heading } from "~/components/heading";
 import { NavBar } from "~/components/navbar";
 import { SectionHeading } from "~/components/sectionHeading";
 import { Subheading } from "~/components/subheading";
-import Image from "next/image";
 import { ContentSection } from "~/components/contentSection";
 import { Carousel } from "~/components/carousel";
 
@@ -13,8 +12,8 @@ const About = () => {
     <React.Fragment>
       <NavBar />
       <div className="m-20 text-center">
-        <Heading headingText="About Us" />
-        <Subheading subheadingText="This section is about us." />
+        <Heading>About Us</Heading>
+        <Subheading>This section is about us.</Subheading>
       </div>
       <div className="m-20 flex ">
         <ContentSection>

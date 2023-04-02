@@ -1,3 +1,4 @@
 /node_modules
 **/*.config.cjs
-**/*.cjs
+**/*.{cjs,mjs,js}
+.eslintrc.cjs
