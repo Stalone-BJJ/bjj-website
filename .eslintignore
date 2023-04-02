@@ -1,8 +1,9 @@
 /node_modules
 **/*.config.cjs
-**/*.{cjs,mjs,js,json}
+**/*.{cjs,mjs,js,json,css,scss,html,md}
 .eslintrc.cjs
 /src/env.mjs
 .editorconfig
 package.json
 package-lock.json
+src/styles/globals.css
