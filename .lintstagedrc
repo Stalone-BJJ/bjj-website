@@ -1,4 +1,3 @@
 {
-  "*.ts": ["npm run lint", "npm run format"],
-  "*.tsx": ["npm run lint", "npm run format"]
+  "*": ["npm run eslint", "npm run format"]
 }
