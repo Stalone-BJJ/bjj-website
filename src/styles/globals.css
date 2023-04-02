@@ -25,4 +25,5 @@
 
 body {
   @apply font-rubik;
+  min-width: 640px;
 }
