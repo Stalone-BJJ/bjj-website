@@ -11,8 +11,12 @@ const Contact = () => {
     <React.Fragment>
       <NavBar />
       <div className=" m-20 text-center">
-        <Heading headingText="Contact Us" />
-        <Subheading subheadingText="If you have any questions or would like to enquire about trying one of our classes, fill in the form below and we will get back to you as soon as possible." />
+        <Heading>Contact Us</Heading>
+        <Subheading>
+          If you have any questions or would like to enquire about trying one of
+          our classes, fill in the form below and we will get back to you as
+          soon as possible.
+        </Subheading>
       </div>
       <div className="m-20 flex">
         <div className=" mr-2 h-3/6 w-6/12" id="contact-form">

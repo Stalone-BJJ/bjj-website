@@ -2,3 +2,4 @@
 **/*.config.cjs
 **/*.{cjs,mjs,js}
 .eslintrc.cjs
+/src/env.mjs

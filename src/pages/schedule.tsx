@@ -10,8 +10,8 @@ const Schedule = () => {
     <React.Fragment>
       <NavBar />
       <div className="m-20 text-center">
-        <Heading headingText="Schedule" />
-        <Subheading subheadingText="Our Schedule and Class Selection" />
+        <Heading>Schedule</Heading>
+        <Subheading>Our Schedule and Class Selection</Subheading>
       </div>
       <div className="m-20">
         <ClassTimetable />

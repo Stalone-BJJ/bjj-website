@@ -9,8 +9,10 @@ const Gallery = () => {
     <React.Fragment>
       <NavBar />
       <div className="m-20 text-center">
-        <Heading headingText="Gallery" />
-        <Subheading subheadingText="Why not check out some photos of us dismembering oponents" />
+        <Heading>Gallery</Heading>
+        <Subheading>
+          Why not check out some photos of us dismembering oponents
+        </Subheading>
       </div>
       <div className="m-20 flex justify-center">
         <p className="">Insta Intergration?</p>
