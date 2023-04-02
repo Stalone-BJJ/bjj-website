@@ -1,6 +1,8 @@
 /node_modules
 **/*.config.cjs
-**/*.{cjs,mjs,js}
+**/*.{cjs,mjs,js,json}
 .eslintrc.cjs
 /src/env.mjs
 .editorconfig
+package.json
+package-lock.json
