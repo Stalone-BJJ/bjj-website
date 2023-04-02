@@ -4,12 +4,13 @@ import { Heading } from "~/components/Heading";
 import { NavBar } from "~/components/Navbar";
 import { Subheading } from "~/components/Subheading";
 import Image from "next/image";
+import { ContactForm } from "~/components/ContactForm";
 
 const Home = () => {
   return (
     <React.Fragment>
       <NavBar />
-      <div className="relative h-[780px]">
+      <div className="relative h-[960px]">
         <Image
           alt="Hero"
           fill
@@ -33,7 +34,15 @@ const Home = () => {
               Book your free trial class today.
             </p>
           </div>
-          <div>Form within here</div>
+          <div className="w-[420px] rounded-lg bg-slate-300 p-4">
+            <h3 className="text-bold text-center text-3xl font-bold text-black">
+              BOOK YOUR FREE CLASS
+            </h3>
+            <p className="mb-4 text-center text-xl text-black">
+              Please fill in your details below
+            </p>
+            <ContactForm />
+          </div>
         </div>
       </div>
       <Footer />
