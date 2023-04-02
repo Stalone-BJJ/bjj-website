@@ -1,9 +1,9 @@
 import React from "react";
-import { ClassTimetable } from "~/components/classTimetable";
-import { Footer } from "~/components/footer";
-import { Heading } from "~/components/heading";
-import { NavBar } from "~/components/navbar";
-import { Subheading } from "~/components/subheading";
+import { ClassTimetable } from "~/components/ClassTimetable";
+import { Footer } from "~/components/Footer";
+import { Heading } from "~/components/Heading";
+import { NavBar } from "~/components/Navbar";
+import { Subheading } from "~/components/Subheading";
 
 const Schedule = () => {
   return (

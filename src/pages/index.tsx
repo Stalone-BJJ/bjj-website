@@ -1,8 +1,8 @@
 import React from "react";
-import { Footer } from "~/components/footer";
-import { Heading } from "~/components/heading";
-import { NavBar } from "~/components/navbar";
-import { Subheading } from "~/components/subheading";
+import { Footer } from "~/components/Footer";
+import { Heading } from "~/components/Heading";
+import { NavBar } from "~/components/Navbar";
+import { Subheading } from "~/components/Subheading";
 import Image from "next/image";
 
 const Home = () => {

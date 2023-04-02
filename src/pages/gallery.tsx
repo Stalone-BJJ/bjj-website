@@ -1,8 +1,8 @@
 import React from "react";
-import { Footer } from "~/components/footer";
-import { Heading } from "~/components/heading";
-import { Subheading } from "~/components/subheading";
-import { NavBar } from "~/components/navbar";
+import { Footer } from "~/components/Footer";
+import { Heading } from "~/components/Heading";
+import { Subheading } from "~/components/Subheading";
+import { NavBar } from "~/components/Navbar";
 
 const Gallery = () => {
   return (

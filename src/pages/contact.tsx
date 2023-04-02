@@ -1,10 +1,10 @@
 import React from "react";
-import { ContactForm } from "~/components/contactForm";
-import { Footer } from "~/components/footer";
-import { Heading } from "~/components/heading";
-import { NavBar } from "~/components/navbar";
-import { Subheading } from "~/components/subheading";
-import { Map } from "~/components/map";
+import { ContactForm } from "~/components/ContactForm";
+import { Footer } from "~/components/Footer";
+import { Heading } from "~/components/Heading";
+import { NavBar } from "~/components/Navbar";
+import { Subheading } from "~/components/Subheading";
+import { Map } from "~/components/Map";
 
 const Contact = () => {
   return (

@@ -1,10 +1,10 @@
 import React from "react";
-import { Footer } from "~/components/footer";
-import { Heading } from "~/components/heading";
-import { NavBar } from "~/components/navbar";
-import { SectionHeading } from "~/components/sectionHeading";
-import { Subheading } from "~/components/subheading";
-import { ContentSection } from "~/components/contentSection";
+import { Footer } from "~/components/Footer";
+import { Heading } from "~/components/Heading";
+import { NavBar } from "~/components/Navbar";
+import { SectionHeading } from "~/components/SectionHeading";
+import { Subheading } from "~/components/Subheading";
+import { ContentSection } from "~/components/ContentSection";
 
 const News = () => {
   return (
