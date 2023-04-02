@@ -12,6 +12,7 @@ export const ContactForm = () => {
   const { register, handleSubmit, watch } = useForm<FormValues>();
 
   const handleFormSubmission = (formData: FormValues) => {
+    // eslint-disable-next-line no-console
     console.log(formData);
 
     return formData;
