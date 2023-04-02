@@ -1,143 +1,106 @@
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 
-interface ContactFormData {
-  firstname: string;
-  surname: string;
+interface FormValues {
+  name: string;
   phoneNumber: string;
   interestedClass: string;
   email: string;
-  additionalInformation: string;
+  additionalInfo: string;
 }
 
 export const ContactForm = () => {
-  const [firstname, setFirstname] = useState("");
-  const [surname, setSurname] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [interestedClass, setInterestedClass] = useState("");
-  const [email, setEmail] = useState("");
-  const [additionalInformation, setAdditionalInformation] = useState("");
+  const { register, handleSubmit, watch } = useForm<FormValues>();
 
-  const handleFormSubmission = (event: React.SyntheticEvent) => {
-    event.preventDefault();
-
-    const formData: ContactFormData = {
-      firstname: firstname,
-      surname: surname,
-      phoneNumber: phoneNumber,
-      interestedClass: interestedClass,
-      email: email,
-      additionalInformation: additionalInformation,
-    };
-
+  const handleFormSubmission = (formData: FormValues) => {
     console.log(formData);
 
-    setSurname("");
-    setFirstname("");
-    setPhoneNumber("");
-    setInterestedClass("");
-    setEmail("");
-    setAdditionalInformation("");
+    return formData;
   };
 
   return (
-    <form onSubmit={(event) => handleFormSubmission(event)}>
+    <form onSubmit={handleSubmit(handleFormSubmission)}>
       <div className="mb-4">
         <label
-          htmlFor="class"
           className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          htmlFor="class"
         >
           Class
         </label>
         <select
-          onChange={(e) => setInterestedClass(e.target.value)}
-          id="class"
+          {...register("interestedClass", { required: true })}
           className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-          required
-          defaultValue={interestedClass}
-          name="interestedClass"
         >
-          <option disabled value={interestedClass}>
+          <option disabled value={watch("interestedClass")}>
             -- Select Option --
           </option>
           <option value="All Level Class">All Levels Class</option>
-          <option value="Womans Only Class">Womens Only Class</option>
+          <option value="Womens Only Class">Womens Only Class</option>
           <option value="Kids Class">Kids Class</option>
           <option value="Fundamental Class">Fundamental Class</option>
         </select>
       </div>
       <div className="mb-4">
         <label
-          htmlFor="name"
           className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          htmlFor="name"
         >
           Name
         </label>
         <input
-          value={firstname}
-          onChange={(e) => setFirstname(e.target.value)}
-          type="text"
-          id="name"
+          {...register("name", { required: true })}
           className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          id="name"
           placeholder="John Doe"
-          required
-          name="firstName"
+          type="text"
         />
       </div>
       <div className="mb-4">
         <label
-          htmlFor="phone"
           className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          htmlFor="phone"
         >
           Phone number
         </label>
         <input
-          value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value)}
-          type="tel"
-          id="phone"
+          {...register("phoneNumber", { required: true })}
           className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          id="phone"
           placeholder="07123456789"
-          required
-          name="phoneNumber"
+          type="tel"
         />
       </div>
       <div className="mb-4">
         <label
-          htmlFor="email"
           className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          htmlFor="email"
         >
           Email address
         </label>
         <input
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          type="email"
-          id="email"
+          {...register("email", { required: true })}
           className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          id="email"
           placeholder="john.doe@email.com"
-          required
+          type="email"
         />
       </div>
       <div className="mb-4">
         <label
-          htmlFor="Additional Info"
           className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          htmlFor="additionalInfo"
         >
           Additional Information / Questions
         </label>
         <textarea
-          name="additionalInfo"
-          value={additionalInformation}
-          onChange={(e) => setAdditionalInformation(e.target.value)}
-          id="addintional-info"
+          {...register("additionalInfo", { required: true })}
           className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          id="additional-info"
           placeholder="Feel free to provide more information or ask any questions here."
         />
       </div>
       <button
-        type="submit"
         className="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
+        type="submit"
       >
         Submit
       </button>

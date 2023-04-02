@@ -11,9 +11,9 @@ const Home = () => {
       <NavBar />
       <div className="relative h-[780px]">
         <Image
-          src="/images/hero-banner.jpg"
           alt="Hero"
           fill
+          src="/images/hero-banner.jpg"
           style={{ objectFit: "cover" }}
         />
         <div className="absolute top-0 mt-10 w-full text-center text-white">
