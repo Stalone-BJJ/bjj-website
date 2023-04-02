@@ -3,3 +3,4 @@
 **/*.{cjs,mjs,js}
 .eslintrc.cjs
 /src/env.mjs
+.editorconfig

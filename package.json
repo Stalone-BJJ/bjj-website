@@ -6,8 +6,10 @@
     "build": "next build",
     "dev": "next dev -p 5555",
     "postinstall": "prisma generate",
-    "lint": "next lint",
-    "start": "next start -p 5555"
+    "lint": "next lint --fix",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "start": "next start -p 5555",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@formspree/react": "^2.4.1",
@@ -38,6 +40,8 @@
     "autoprefixer": "^10.4.7",
     "eslint": "^8.34.0",
     "eslint-config-next": "^13.2.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
     "postcss": "^8.4.14",
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
