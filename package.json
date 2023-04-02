@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev -p 5555",
+    "dev": "next dev -p 5555 --hostname 127.0.0.1",
     "postinstall": "prisma generate",
     "eslint": "eslint --ext .ts,.tsx --fix src",
     "lint": "next lint",
@@ -25,6 +25,7 @@
     "@trpc/server": "^10.9.0",
     "next": "^13.2.1",
     "next-auth": "^4.19.0",
+    "node-fetch": "^3.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",

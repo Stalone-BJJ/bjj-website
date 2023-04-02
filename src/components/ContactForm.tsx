@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import HCAPTCHA from "@hcaptcha/react-hcaptcha";
 
 interface FormValues {
@@ -11,18 +11,43 @@ interface FormValues {
 }
 
 export const ContactForm = () => {
-  const captchaRef = useRef<HCAPTCHA | null>(null);
+  const [hCaptchaToken, setHCaptchaToken] = useState("");
+  const hCaptchaRef = useRef<HCAPTCHA | null>(null);
   const { register, handleSubmit, watch } = useForm<FormValues>({
     defaultValues: { class: "All Levels Class" },
   });
 
-  const handleFormSubmission = (formData: FormValues) => {
+  const onLoad = () => hCaptchaRef.current?.execute();
+
+  const handleFormSubmission = async (formData: FormValues) => {
     // eslint-disable-next-line no-console
     console.log(formData);
-    // eslint-disable-next-line no-console
+
+    try {
+      const response = await fetch("/api/validate-token", {
+        body: JSON.stringify({ captchaToken: hCaptchaToken }),
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+      });
+
+      const data = (await response.json()) as string;
+
+      // eslint-disable-next-line no-console
+      console.log(data);
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log(error);
+    }
 
     return formData;
   };
+
+  useEffect(() => {
+    if (hCaptchaToken) {
+      // eslint-disable-next-line no-console
+      console.log(hCaptchaToken);
+    }
+  }, [hCaptchaToken]);
 
   return (
     <form onSubmit={handleSubmit(handleFormSubmission)}>
@@ -105,7 +130,11 @@ export const ContactForm = () => {
           placeholder="Feel free to provide more information or ask any questions here."
         />
       </div>
-      <HCAPTCHA sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string} />
+      <HCAPTCHA
+        onLoad={onLoad}
+        onVerify={setHCaptchaToken}
+        sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string}
+      />
       <button
         className="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
         type="submit"
