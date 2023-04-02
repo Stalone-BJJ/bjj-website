@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import HCAPTCHA from "@hcaptcha/react-hcaptcha";
 
 interface FormValues {
@@ -34,6 +34,17 @@ export const ContactForm = () => {
 
       // eslint-disable-next-line no-console
       console.log(data);
+
+      const emailResponse = await fetch("/api/send-email", {
+        body: JSON.stringify({ ...formData }),
+        headers: { "Content-Type": "application/json" },
+        method: "POST",
+      });
+
+      const emailData = (await emailResponse.json()) as string;
+
+      // eslint-disable-next-line no-console
+      console.log(emailData);
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error);
@@ -41,13 +52,6 @@ export const ContactForm = () => {
 
     return formData;
   };
-
-  useEffect(() => {
-    if (hCaptchaToken) {
-      // eslint-disable-next-line no-console
-      console.log(hCaptchaToken);
-    }
-  }, [hCaptchaToken]);
 
   return (
     <form onSubmit={handleSubmit(handleFormSubmission)}>
@@ -125,9 +129,10 @@ export const ContactForm = () => {
         </label>
         <textarea
           {...register("info")}
-          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          className="block max-h-16 w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
           id="additional-info"
           placeholder="Feel free to provide more information or ask any questions here."
+          style={{ resize: "none" }}
         />
       </div>
       <HCAPTCHA
@@ -136,7 +141,7 @@ export const ContactForm = () => {
         sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string}
       />
       <button
-        className="w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
+        className="mt-4 w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
         type="submit"
       >
         Submit
