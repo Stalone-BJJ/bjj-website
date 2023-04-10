@@ -3,23 +3,23 @@ import Image from "next/image";
 
 export const NavBar = () => {
   return (
-    <nav className="border-gray-200 bg-white px-2 py-2.5 dark:bg-gray-900 sm:px-4">
+    <nav className="border-gray-200 bg-white px-2 py-2.5 dark:bg-black sm:px-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
             src="https://img.logoipsum.com/290.svg"
             width={100}
             height={100}
-            alt="BJJ Logo"
+            alt="Business Logo"
           />
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+          <span className="ml-5 self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             Chorley BJJ Academy
           </span>
         </Link>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
+          className="focus:ring-gray-600dark:text-gray-400 ml-3 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-black focus:outline-none focus:ring-2 dark:hover:bg-black dark:focus:ring-gray-900 md:hidden"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
@@ -39,7 +39,7 @@ export const NavBar = () => {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:text-sm md:font-medium md:dark:bg-gray-900">
+          <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:text-sm md:font-medium md:dark:bg-black">
             <li>
               <Link
                 href="/"
