@@ -8,6 +8,7 @@ import { ContactForm } from "~/components/ContactForm";
 import { BlackBelt } from "~/components/BlackBelt";
 import { Instructor } from "~/components/Instructor";
 import instructors from "~/data/instructors.json";
+import Link from "next/link";
 
 type Instructor = {
   image: string;
@@ -77,7 +78,7 @@ const Home = () => {
               </h3>
               <BlackBelt />
             </div>
-            <p className="my-8 w-[480px] text-center text-xl text-white lg:mt-8 lg:w-[720px] lg:text-lg">
+            <p className="my-8 w-[480px] text-xl text-white lg:mt-8 lg:w-[720px] lg:text-lg">
               Previously Gracie Barra Chorley, we want our school to be a
               showcase for all that Brazilian Jiu-Jitsu is. We wanted to break
               the concept of a martial arts gym; we wanted a facility that is
@@ -109,7 +110,7 @@ const Home = () => {
               </h3>
               <BlackBelt />
             </div>
-            <p className="my-8 w-[480px] text-center text-xl text-white lg:w-[720px] lg:text-lg">
+            <p className="my-8 w-[480px] text-xl text-white lg:w-[720px] lg:text-lg">
               All of our instructors are trained to the highest standards
               through various industry leading Instructor Certification
               Programmes, ensuring the best possible experience for students.
@@ -125,6 +126,37 @@ const Home = () => {
                 />
               ))}
             </div>
+          </div>
+        </div>
+        <div className="relative h-full">
+          <Image
+            alt="Get in Touch"
+            fill
+            src="/images/get-in-touch.png"
+            style={{ objectFit: "cover" }}
+          />
+          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-70" />
+          <div className="relative flex h-full flex-col items-center justify-center">
+            <div>
+              <h3 className="mt-8 text-5xl font-bold text-white">
+                GET IN TOUCH
+              </h3>
+              <BlackBelt />
+            </div>
+            <p className="mt-8 mb-4 w-[480px] text-xl text-white lg:w-[720px] lg:text-lg">
+              Please feel free to visit us at our academy. If visiting for the
+              first time we recommend booking in so then you can be shown around
+              and all questions answered.
+            </p>
+            <p className="mb-8 w-[480px] text-xl text-white lg:w-[720px] lg:text-lg">
+              <Link href="tel:01257000000">T: 07540 586726</Link>
+              <br />
+              <Link href="mailto:contact@stalonebjj.co.uk">
+                E: contact@stalonebjj.co.uk
+              </Link>
+              <br />
+              Or use our form above.
+            </p>
           </div>
         </div>
       </div>
