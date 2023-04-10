@@ -3,24 +3,47 @@ import { type NextApiRequest, type NextApiResponse } from "next";
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY as string);
 
-const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
+interface FormSubmission extends NextApiRequest {
+  body: {
+    name: string;
+    email: string;
+    number: string;
+    class: string;
+    info: string;
+  };
+}
+
+const sendEmail = async (
+  { body: { name, number, email, class: selectedClass, info } }: FormSubmission,
+  res: NextApiResponse
+) => {
   try {
-    const [response] = await sendgrid.send({
+    await sendgrid.send({
       from: "iainthesupreme@gmail.com",
       html: `
-        <h1>Test email</h1>
-        <p>Test email body</p>
-        ${req.body as string}
+        <h1>Professor Stalone</h1>
+        <p>${name} would like to join for the ${selectedClass} trial at your next suitable availability.</p>
+        <p>Here is their form information:</p>
+        <p>
+          Name: ${name}
+          <br />
+          Email: ${email}
+          <br />
+          Phone: ${number}
+          <br />
+          Class: ${selectedClass}
+          <br />
+          Message: ${info}
+        </p>
+        <p>You can reply to this email directly to contact them.</p>
       `,
-      subject: "Test email",
+      replyTo: email,
+      subject: "Class Trial Request",
       to: "iainthesupreme@gmail.com",
     });
 
-    console.log(response);
-
     res.status(200).send({ message: "Email sent", success: true });
   } catch (error) {
-    console.log(error);
     res.status(500).send({ error });
   }
 };
