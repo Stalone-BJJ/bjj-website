@@ -36,8 +36,8 @@ type CreateContextOptions = {
  */
 const createInnerTRPCContext = (opts: CreateContextOptions) => {
   return {
-    prisma,
     session: opts.session,
+    prisma,
   };
 };
 
@@ -70,6 +70,7 @@ import superjson from "superjson";
 import { ZodError } from "zod";
 
 const t = initTRPC.context<typeof createTRPCContext>().create({
+  transformer: superjson,
   errorFormatter({ shape, error }) {
     return {
       ...shape,
@@ -80,7 +81,6 @@ const t = initTRPC.context<typeof createTRPCContext>().create({
       },
     };
   },
-  transformer: superjson,
 });
 
 /**

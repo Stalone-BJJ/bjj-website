@@ -1,6 +1,6 @@
 import React from "react";
-import { Footer } from "~/components/Footer";
-import { NavBar } from "~/components/Navbar";
+import { Footer } from "~/components/footer";
+import { NavBar } from "~/components/navbar";
 import Image from "next/image";
 
 const Schedule = () => {
@@ -10,9 +10,9 @@ const Schedule = () => {
       <div className="mb-20 mt-10 flex justify-center">
         <Image
           alt="timetable"
+          width={1500}
           height={1500}
           src="/stalone-bjj-timetable.JPG"
-          width={1500}
         ></Image>
       </div>
       <Footer />
