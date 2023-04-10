@@ -1,0 +1,8 @@
+.next
+.eslintignore
+package.json
+package-lock.json
+.linstagedrc
+.prettierignore
+/src/data/
+/public/

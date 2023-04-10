@@ -1,20 +1,19 @@
 import React from "react";
-import { Footer } from "~/components/footer";
-import { Heading } from "~/components/heading";
-import { NavBar } from "~/components/navbar";
-import { SectionHeading } from "~/components/sectionHeading";
-import { Subheading } from "~/components/subheading";
-import Image from "next/image";
-import { ContentSection } from "~/components/contentSection";
-import { Carousel } from "~/components/carousel";
+import { Footer } from "~/components/Footer";
+import { Heading } from "~/components/Heading";
+import { NavBar } from "~/components/Navbar";
+import { SectionHeading } from "~/components/SectionHeading";
+import { Subheading } from "~/components/Subheading";
+import { ContentSection } from "~/components/ContentSection";
+import { Carousel } from "~/components/Carousel";
 
 const About = () => {
   return (
     <React.Fragment>
       <NavBar />
       <div className="m-20 text-center">
-        <Heading headingText="About Us" />
-        <Subheading subheadingText="This section is about us." />
+        <Heading>About Us</Heading>
+        <Subheading>This section is about us.</Subheading>
       </div>
       <div className="m-20 flex ">
         <ContentSection>
