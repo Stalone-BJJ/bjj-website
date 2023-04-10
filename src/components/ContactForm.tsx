@@ -63,7 +63,7 @@ export const ContactForm = () => {
     <form onSubmit={handleSubmit(handleFormSubmission)}>
       <div className="mb-4">
         <label
-          className="mb-2 block text-2xl font-bold text-gray-900 text-black lg:text-sm lg:font-medium"
+          className="mb-2 block text-2xl text-gray-900 lg:text-sm lg:font-medium"
           htmlFor="class"
         >
           Class
@@ -88,7 +88,7 @@ export const ContactForm = () => {
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-2xl font-bold text-gray-900 text-black lg:text-sm lg:font-medium"
+          className="mb-2 block text-2xl text-gray-900 lg:text-sm lg:font-medium"
           htmlFor="name"
         >
           Name
@@ -108,7 +108,7 @@ export const ContactForm = () => {
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-2xl font-bold text-gray-900 text-black lg:text-sm lg:font-medium"
+          className="mb-2 block text-2xl text-gray-900 lg:text-sm lg:font-medium"
           htmlFor="phone"
         >
           Phone number
@@ -128,7 +128,7 @@ export const ContactForm = () => {
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-2xl font-bold text-gray-900 text-black lg:text-sm lg:font-medium"
+          className="mb-2 block text-2xl text-gray-900 lg:text-sm lg:font-medium"
           htmlFor="email"
         >
           Email address
@@ -148,7 +148,7 @@ export const ContactForm = () => {
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-2xl font-bold text-gray-900 text-black lg:text-sm lg:font-medium"
+          className="mb-2 block text-2xl text-gray-900 lg:text-sm lg:font-medium"
           htmlFor="info"
         >
           Additional Information / Questions
@@ -170,6 +170,7 @@ export const ContactForm = () => {
           }}
           ref={hCaptchaRef}
           sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string}
+          size="normal"
         />
         {errors.captcha && !hCaptchaToken && (
           <p className="mt-1 text-lg font-bold text-red-600 lg:text-sm lg:font-medium">
