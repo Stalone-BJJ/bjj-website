@@ -81,7 +81,7 @@ export const ContactForm = () => {
           <option value="Womens Only Class">Womens Only</option>
         </select>
         {errors.class && (
-          <p className="mt-2 text-red-600">Please select a class</p>
+          <p className="mt-1 text-sm text-red-600">Please select a class</p>
         )}
       </div>
       <div className="mb-4">
@@ -99,7 +99,7 @@ export const ContactForm = () => {
           type="text"
         />
         {errors.name && (
-          <p className="mt-2 text-red-600">Please enter your name</p>
+          <p className="mt-1 text-sm text-red-600">Please enter your name</p>
         )}
       </div>
       <div className="mb-4">
@@ -117,7 +117,9 @@ export const ContactForm = () => {
           type="tel"
         />
         {errors.number && (
-          <p className="mt-2 text-red-600">Please enter a contact number</p>
+          <p className="mt-1 text-sm text-red-600">
+            Please enter a contact number
+          </p>
         )}
       </div>
       <div className="mb-4">
@@ -135,7 +137,7 @@ export const ContactForm = () => {
           type="email"
         />
         {errors.email && (
-          <p className="mt-2 text-red-600">
+          <p className="mt-1 text-sm text-red-600">
             Please enter your contact email address
           </p>
         )}
@@ -155,7 +157,7 @@ export const ContactForm = () => {
           style={{ resize: "none" }}
         />
       </div>
-      <div {...register("captcha")}>
+      <div {...register("captcha")} className="flex w-full justify-center">
         <HCAPTCHA
           id="h-captcha"
           onVerify={(token) => {
@@ -166,11 +168,11 @@ export const ContactForm = () => {
           sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string}
         />
         {errors.captcha && !hCaptchaToken && (
-          <p className="mt-2 text-red-600">{errors.captcha.message}</p>
+          <p className="mt-1 text-sm text-red-600">{errors.captcha.message}</p>
         )}
       </div>
       <button
-        className="mt-4 w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
+        className="mt-4 w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="submit"
       >
         Submit
