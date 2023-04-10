@@ -1,8 +1,6 @@
 import React from "react";
 import { Footer } from "~/components/footer";
-import { Heading } from "~/components/heading";
 import { NavBar } from "~/components/navbar";
-import { Subheading } from "~/components/subheading";
 import Image from "next/image";
 
 const Schedule = () => {
