@@ -7,7 +7,7 @@ const Schedule = () => {
   return (
     <React.Fragment>
       <NavBar />
-      <div className="mb-10 flex justify-center">
+      <div className="mb-20 mt-10 flex justify-center">
         <Image
           alt="timetable"
           width={1500}
