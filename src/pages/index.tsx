@@ -20,10 +20,17 @@ type Instructor = {
 const Home = () => {
   const coaches = instructors as Instructor[];
 
+  const scrollToView = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <React.Fragment>
       <NavBar />
-      <div className="flex flex-col">
+      <div className="flex scroll-mt-[72px] flex-col" id="hero-banner">
         <div className="relative h-full lg:h-[960px]">
           <Image
             alt="Hero"
@@ -55,7 +62,10 @@ const Home = () => {
                 Book your free trial class today.
               </p>
             </div>
-            <div className="my-12 w-[90%] rounded-lg bg-gray-300 p-4 lg:mt-48 lg:w-[448px]">
+            <div
+              className="my-12 w-[90%] rounded-lg bg-gray-300 p-4 lg:mt-48 lg:w-[448px]"
+              id="contact-form"
+            >
               <h3 className="text-bold mb-2 text-center text-3xl font-bold text-black">
                 BOOK YOUR FREE CLASS
               </h3>
@@ -148,14 +158,29 @@ const Home = () => {
               first time we recommend booking in so then you can be shown around
               and all questions answered.
             </p>
-            <p className="mb-8 w-[480px] text-xl text-white lg:w-[720px] lg:text-lg">
-              <Link href="tel:01257000000">T: 07540 586726</Link>
-              <br />
-              <Link href="mailto:contact@stalonebjj.co.uk">
-                E: contact@stalonebjj.co.uk
+            <p className="mb-8 w-[480px] text-xl font-bold text-white lg:w-[720px] lg:text-lg">
+              T:{" "}
+              <Link
+                className="underline decoration-red-600 decoration-2 hover:text-gray-400"
+                href="tel:07540586726"
+              >
+                07540 586726
               </Link>
               <br />
-              Or use our form above.
+              E:{" "}
+              <Link
+                className="underline decoration-red-600 decoration-2 hover:text-gray-400"
+                href="mailto:contact@stalonebjj.co.uk"
+              >
+                contact@stalonebjj.co.uk
+              </Link>
+              <br />
+              <span
+                className="cursor-pointer hover:text-gray-400"
+                onClick={() => scrollToView("hero-banner")}
+              >
+                Or use our form above.
+              </span>
             </p>
           </div>
         </div>

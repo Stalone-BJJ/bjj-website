@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev -p 5555 --hostname 127.0.0.1",
+    "dev": "next dev -p 5555",
+    "dev:iain": "next dev -p 5555 --hostname 192.168.1.20",
     "postinstall": "prisma generate",
     "eslint": "eslint --ext .ts,.tsx --fix src",
     "lint": "next lint",
