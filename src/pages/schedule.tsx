@@ -1,20 +1,21 @@
 import React from "react";
-import { ClassTimetable } from "~/components/classTimetable";
 import { Footer } from "~/components/footer";
 import { Heading } from "~/components/heading";
 import { NavBar } from "~/components/navbar";
 import { Subheading } from "~/components/subheading";
+import Image from "next/image";
 
 const Schedule = () => {
   return (
     <React.Fragment>
       <NavBar />
-      <div className="m-20 text-center">
-        <Heading headingText="Schedule" />
-        <Subheading subheadingText="Our Schedule and Class Selection" />
-      </div>
-      <div className="m-20 flex justify-center">
-        <ClassTimetable />
+      <div className="mb-10 flex justify-center">
+        <Image
+          alt="timetable"
+          width={1500}
+          height={1500}
+          src="/stalone-bjj-timetable.JPG"
+        ></Image>
       </div>
       <Footer />
     </React.Fragment>
