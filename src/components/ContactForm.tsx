@@ -8,21 +8,27 @@ interface FormValues {
   class: string;
   email: string;
   info: string;
+  captcha: string;
+}
+
+interface HCaptchaResponse extends Response {
+  success: boolean;
 }
 
 export const ContactForm = () => {
   const [hCaptchaToken, setHCaptchaToken] = useState("");
   const hCaptchaRef = useRef<HCAPTCHA | null>(null);
-  const { register, handleSubmit, watch } = useForm<FormValues>({
-    defaultValues: { class: "All Levels Class" },
-  });
-
-  const onLoad = () => hCaptchaRef.current?.execute();
+  const {
+    register,
+    handleSubmit,
+    setError,
+    setValue,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm<FormValues>({ defaultValues: { class: "" } });
 
   const handleFormSubmission = async (formData: FormValues) => {
-    // eslint-disable-next-line no-console
-    console.log(formData);
-
     try {
       const response = await fetch("/api/validate-token", {
         body: JSON.stringify({ captchaToken: hCaptchaToken }),
@@ -30,27 +36,27 @@ export const ContactForm = () => {
         method: "POST",
       });
 
-      const data = (await response.json()) as string;
+      const hCaptchaData =
+        (await response.json()) as unknown as HCaptchaResponse;
 
-      // eslint-disable-next-line no-console
-      console.log(data);
+      if (hCaptchaData.success === false || !watch("captcha")) {
+        setError("captcha", { message: "Please complete the captcha" });
 
-      const emailResponse = await fetch("/api/send-email", {
+        return;
+      }
+
+      await fetch("/api/send-email", {
         body: JSON.stringify({ ...formData }),
         headers: { "Content-Type": "application/json" },
         method: "POST",
       });
 
-      const emailData = (await emailResponse.json()) as string;
-
-      // eslint-disable-next-line no-console
-      console.log(emailData);
+      reset();
+      hCaptchaRef.current?.resetCaptcha();
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error);
     }
-
-    return formData;
   };
 
   return (
@@ -74,6 +80,9 @@ export const ContactForm = () => {
           <option value="Kids Class">Kids</option>
           <option value="Womens Only Class">Womens Only</option>
         </select>
+        {errors.class && (
+          <p className="mt-2 text-red-600">Please select a class</p>
+        )}
       </div>
       <div className="mb-4">
         <label
@@ -89,6 +98,9 @@ export const ContactForm = () => {
           placeholder="John Doe"
           type="text"
         />
+        {errors.name && (
+          <p className="mt-2 text-red-600">Please enter your name</p>
+        )}
       </div>
       <div className="mb-4">
         <label
@@ -104,6 +116,9 @@ export const ContactForm = () => {
           placeholder="07123456789"
           type="tel"
         />
+        {errors.number && (
+          <p className="mt-2 text-red-600">Please enter a contact number</p>
+        )}
       </div>
       <div className="mb-4">
         <label
@@ -119,6 +134,11 @@ export const ContactForm = () => {
           placeholder="john.doe@email.com"
           type="email"
         />
+        {errors.email && (
+          <p className="mt-2 text-red-600">
+            Please enter your contact email address
+          </p>
+        )}
       </div>
       <div className="mb-4">
         <label
@@ -135,11 +155,20 @@ export const ContactForm = () => {
           style={{ resize: "none" }}
         />
       </div>
-      <HCAPTCHA
-        onLoad={onLoad}
-        onVerify={setHCaptchaToken}
-        sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string}
-      />
+      <div {...register("captcha")}>
+        <HCAPTCHA
+          id="h-captcha"
+          onVerify={(token) => {
+            setHCaptchaToken(token);
+            setValue("captcha", token);
+          }}
+          ref={hCaptchaRef}
+          sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string}
+        />
+        {errors.captcha && !hCaptchaToken && (
+          <p className="mt-2 text-red-600">{errors.captcha.message}</p>
+        )}
+      </div>
       <button
         className="mt-4 w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
         type="submit"
