@@ -26,9 +26,9 @@ export const Instructor = ({
     <div className="mt-4 mb-8 text-white">
       <Image
         alt=""
-        height={isMobile ? 360 : 180}
+        height={isMobile ? 360 : 240}
         src={image}
-        width={isMobile ? 480 : 240}
+        width={isMobile ? 480 : 360}
       />
       <h4 className="mt-2 text-4xl font-bold uppercase italic lg:text-2xl">
         {name}

@@ -9,7 +9,16 @@ import { BlackBelt } from "~/components/BlackBelt";
 import { Instructor } from "~/components/Instructor";
 import instructors from "~/data/instructors.json";
 
+type Instructor = {
+  image: string;
+  name: string;
+  title: string;
+  location: string;
+};
+
 const Home = () => {
+  const coaches = instructors as Instructor[];
+
   return (
     <React.Fragment>
       <NavBar />
@@ -89,7 +98,7 @@ const Home = () => {
           <Image
             alt="Our Schools"
             fill
-            src="/images/coaches.jpg"
+            src="/images/coaches.png"
             style={{ objectFit: "cover" }}
           />
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-70" />
@@ -105,8 +114,8 @@ const Home = () => {
               through various industry leading Instructor Certification
               Programmes, ensuring the best possible experience for students.
             </p>
-            <div className="lg:flex lg:gap-x-8">
-              {instructors.map((instructor) => (
+            <div className="lg:flex lg:w-[1080px] lg:flex-wrap lg:justify-center lg:gap-x-8">
+              {coaches.map((instructor) => (
                 <Instructor
                   image={instructor.image}
                   key={instructor.name}
