@@ -63,14 +63,14 @@ export const ContactForm = () => {
     <form onSubmit={handleSubmit(handleFormSubmission)}>
       <div className="mb-4">
         <label
-          className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          className="mb-2 block text-2xl font-bold text-gray-900 text-black lg:text-sm lg:font-medium"
           htmlFor="class"
         >
           Class
         </label>
         <select
           {...register("class", { required: true })}
-          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 lg:text-sm"
         >
           <option disabled value={watch("class")}>
             -- Select Option --
@@ -81,77 +81,81 @@ export const ContactForm = () => {
           <option value="Womens Only Class">Womens Only</option>
         </select>
         {errors.class && (
-          <p className="mt-1 text-sm text-red-600">Please select a class</p>
+          <p className="mt-1 text-lg font-bold text-red-600 lg:text-sm lg:font-medium">
+            Please select a class
+          </p>
         )}
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          className="mb-2 block text-2xl font-bold text-gray-900 text-black lg:text-sm lg:font-medium"
           htmlFor="name"
         >
           Name
         </label>
         <input
           {...register("name", { required: true })}
-          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 lg:text-sm"
           id="name"
           placeholder="John Doe"
           type="text"
         />
         {errors.name && (
-          <p className="mt-1 text-sm text-red-600">Please enter your name</p>
+          <p className="mt-1 text-lg font-bold text-red-600 lg:text-sm lg:font-medium">
+            Please enter your name
+          </p>
         )}
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          className="mb-2 block text-2xl font-bold text-gray-900 text-black lg:text-sm lg:font-medium"
           htmlFor="phone"
         >
           Phone number
         </label>
         <input
           {...register("number", { required: true })}
-          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 lg:text-sm"
           id="phone"
           placeholder="07123456789"
           type="tel"
         />
         {errors.number && (
-          <p className="mt-1 text-sm text-red-600">
+          <p className="mt-1 text-lg font-bold text-red-600 lg:text-sm lg:font-medium">
             Please enter a contact number
           </p>
         )}
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          className="mb-2 block text-2xl font-bold text-gray-900 text-black lg:text-sm lg:font-medium"
           htmlFor="email"
         >
           Email address
         </label>
         <input
           {...register("email", { required: true })}
-          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 lg:text-sm"
           id="email"
           placeholder="john.doe@email.com"
           type="email"
         />
         {errors.email && (
-          <p className="mt-1 text-sm text-red-600">
+          <p className="mt-1 text-lg font-bold text-red-600 lg:text-sm lg:font-medium">
             Please enter your contact email address
           </p>
         )}
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-sm font-medium text-gray-900 text-black"
+          className="mb-2 block text-2xl font-bold text-gray-900 text-black lg:text-sm lg:font-medium"
           htmlFor="info"
         >
           Additional Information / Questions
         </label>
         <textarea
           {...register("info")}
-          className="block max-h-16 w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-lg text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 lg:text-sm"
           id="additional-info"
           placeholder="Feel free to provide more information or ask any questions here."
           style={{ resize: "none" }}
@@ -168,11 +172,13 @@ export const ContactForm = () => {
           sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY as string}
         />
         {errors.captcha && !hCaptchaToken && (
-          <p className="mt-1 text-sm text-red-600">{errors.captcha.message}</p>
+          <p className="mt-1 text-lg font-bold text-red-600 lg:text-sm lg:font-medium">
+            {errors.captcha.message}
+          </p>
         )}
       </div>
       <button
-        className="mt-4 w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        className="mt-4 w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-2xl font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 lg:text-sm"
         type="submit"
       >
         Submit

@@ -45,7 +45,7 @@ const Home = () => {
                 Book your free trial class today.
               </p>
             </div>
-            <div className="my-12 w-[448px] rounded-lg bg-gray-500 p-4 lg:mt-48">
+            <div className="my-12 w-[448px] rounded-lg bg-gray-300 p-4 lg:mt-48">
               <h3 className="text-bold mb-2 text-center text-3xl font-bold text-black">
                 BOOK YOUR FREE CLASS
               </h3>
