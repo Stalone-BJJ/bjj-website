@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <NavBar />
-      <div className="relative h-[1080px] lg:h-[960px]">
+      <div className="relative h-full lg:h-[960px]">
         <Image
           alt="Hero"
           fill
@@ -23,7 +23,7 @@ const Home = () => {
         </div>
         <div className="relative flex h-full w-full flex-col items-center justify-evenly text-white lg:top-0 lg:flex-row lg:justify-around">
           <div>
-            <h2 className="mt-48 w-[448px] text-4xl font-bold lg:mt-0">
+            <h2 className="mt-56 w-[448px] text-4xl font-bold lg:mt-0">
               JIU-JITSU
               <br />
               <span className="italic">FOR EVERYONE.</span>
@@ -34,7 +34,7 @@ const Home = () => {
               Book your free trial class today.
             </p>
           </div>
-          <div className="w-[448px] rounded-lg bg-slate-300 p-4 lg:mt-24">
+          <div className="my-12 w-[448px] rounded-lg bg-slate-300 p-4 lg:mt-24">
             <h3 className="text-bold text-center text-3xl font-bold text-black">
               BOOK YOUR FREE CLASS
             </h3>
