@@ -28,7 +28,12 @@ const config = {
         fixStyle: "inline-type-imports",
       },
     ],
-    "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        argsIgnorePattern: "^_",
+      },
+    ],
     "@typescript-eslint/no-unsafe-call": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
@@ -43,6 +48,7 @@ const config = {
     "react/jsx-sort-props": "error",
     "no-console": "error",
     "sort-keys": "error",
+    "@next/next/no-title-in-document-head": "off",
   },
 };
 
