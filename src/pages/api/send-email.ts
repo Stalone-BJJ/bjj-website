@@ -19,7 +19,7 @@ const sendEmail = async (
 ) => {
   try {
     await sendgrid.send({
-      from: "iainthesupreme@gmail.com",
+      from: "contact@stalonebjj.co.uk",
       html: `
         <h1>Professor Stalone</h1>
         <p>${name} would like to join for the ${selectedClass} trial at your next suitable availability.</p>
@@ -38,8 +38,8 @@ const sendEmail = async (
         <p>You can reply to this email directly to contact them.</p>
       `,
       replyTo: email,
-      subject: "Class Trial Request",
-      to: "iainthesupreme@gmail.com",
+      subject: `Class Trial Request ${new Date().toLocaleDateString()}`,
+      to: "stalonebjj@gmail.com",
     });
 
     res.status(200).send({ message: "Email sent", success: true });
