@@ -1,6 +1,5 @@
 import React from "react";
 import { Footer } from "~/components/Footer";
-import { Heading } from "~/components/Heading";
 import { NavBar } from "~/components/Navbar";
 import { Subheading } from "~/components/Subheading";
 import Image from "next/image";
@@ -31,10 +30,10 @@ const Home = () => {
     <React.Fragment>
       <NavBar />
       <div className="flex scroll-mt-[72px] flex-col" id="hero-banner">
-        <div className="relative h-full lg:h-[960px]">
+        <div className="relative h-full border-b-2 border-red-600 lg:h-[960px]">
           <Image
             alt="Hero"
-            className="hidden lg:block lg:border-b-2"
+            className="hidden lg:block"
             fill
             src="/images/image00003.jpeg"
             style={{ objectFit: "cover" }}
@@ -49,8 +48,14 @@ const Home = () => {
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
           <div className="absolute top-0 mt-4 flex w-full justify-center">
             <div className="text-center text-white">
-              <Heading>STALONE BJJ ACADEMY</Heading>
-              <BlackBelt />
+              <Image
+                alt="Hero"
+                className="rounded bg-white"
+                height={150}
+                src="/images/thumbnail_stalone-header.png"
+                style={{ objectFit: "cover" }}
+                width={450}
+              />
               <Subheading>EST. 2017</Subheading>
             </div>
           </div>
@@ -81,10 +86,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="relative h-full">
+        <div className="relative h-full border-b-2 border-red-600">
           <Image
             alt="Our Schools"
-            className="border-b-2"
             fill
             src="/images/image00015.jpeg"
             style={{ objectFit: "cover" }}
@@ -114,17 +118,17 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="relative h-full">
+        <div className="relative h-full border-b-2 border-red-600">
           <Image
             alt="Our Schools"
-            className="hidden border-b-2 lg:block"
+            className="hidden lg:block"
             fill
             src="/images/image00036.jpeg"
             style={{ objectFit: "cover" }}
           />
           <Image
             alt="Our Schools"
-            className="border-b-2 lg:hidden"
+            className="lg:hidden"
             fill
             src="/images/image00017_c.jpeg"
             style={{ objectFit: "cover" }}
@@ -158,7 +162,6 @@ const Home = () => {
         <div className="relative h-full">
           <Image
             alt="Get in Touch"
-            className="border-b-2"
             fill
             src="/images/get-in-touch.png"
             style={{ objectFit: "cover" }}
