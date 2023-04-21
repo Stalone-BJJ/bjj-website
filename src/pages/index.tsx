@@ -50,29 +50,33 @@ const Home = () => {
             <div className="text-center text-white">
               <Image
                 alt="Hero"
-                className="rounded bg-white"
+                className="-mb-4 rounded bg-white"
                 height={150}
                 src="/images/thumbnail_stalone-header.png"
                 style={{ objectFit: "cover" }}
                 width={450}
               />
-              <Subheading>EST. 2017</Subheading>
+              <Subheading>
+                EST<span className="text-red-600">.</span> 2017
+              </Subheading>
             </div>
           </div>
           <div className="relative flex h-full w-full flex-col items-center justify-evenly text-white lg:top-0 lg:flex-row lg:justify-around">
             <div>
               <h2 className="mt-56 text-4xl font-bold lg:mt-0">
-                JIU-JITSU
+                JIU<span className="text-red-600">-</span>JITSU
                 <br />
-                <span className="italic">FOR EVERYONE.</span>
+                <span className="italic text-red-600">FOR EVERYONE</span>.
                 <div className="mb-2 hidden w-[275px] lg:block">
                   <BlackBelt />
                 </div>
               </h2>
               <p className="text-xl">
-                Getting started at Stalone BJJ Academy is easy.
+                Getting started at Stalone BJJ Academy is easy
+                <span className="text-red-600">.</span>
                 <br />
-                Book your free trial class today.
+                Book your free trial class today
+                <span className="text-red-600">.</span>
               </p>
             </div>
             <div
@@ -102,16 +106,23 @@ const Home = () => {
               <BlackBelt />
             </div>
             <p className="my-8 w-[480px] text-xl text-white lg:mt-8 lg:w-[720px] lg:text-lg">
-              Previously Gracie Barra Chorley, we want our school to be a
-              showcase for all that Brazilian Jiu-Jitsu is. We wanted to break
-              the concept of a martial arts gym; we wanted a facility that is
-              not shared, is spotlessly clean and which operates full time. Our
-              facility includes large mat space, refreshments, changing
-              facilities and more.
+              Previously Gracie Barra Chorley
+              <span className="text-red-600">,</span> we want our school to be a
+              showcase for all that Brazilian Jiu
+              <span className="text-red-600">-</span>Jitsu is
+              <span className="text-red-600">.</span> We wanted to break the
+              concept of a martial arts gym
+              <span className="text-red-600">;</span> we wanted a facility that
+              is not shared<span className="text-red-600">,</span> is spotlessly
+              clean and which operates full time
+              <span className="text-red-600">.</span> Our facility includes
+              large mat space<span className="text-red-600">,</span>{" "}
+              refreshments<span className="text-red-600">,</span> changing
+              facilities and more<span className="text-red-600">.</span>
             </p>
             <Image
               alt="Cutting Shapes"
-              className="my-8"
+              className="my-8 rounded bg-red-600"
               height={120}
               src="/images/chorley-school.svg"
               width={120}
@@ -144,7 +155,9 @@ const Home = () => {
             <p className="my-8 w-[480px] text-xl text-white lg:w-[720px] lg:text-lg">
               All of our instructors are trained to the highest standards
               through various industry leading Instructor Certification
-              Programmes, ensuring the best possible experience for students.
+              Programmes<span className="text-red-600">,</span> ensuring the
+              best possible experience for students
+              <span className="text-red-600">.</span>
             </p>
             <div className="lg:flex lg:w-[1080px] lg:flex-wrap lg:justify-center lg:gap-x-8">
               {coaches.map((instructor) => (
