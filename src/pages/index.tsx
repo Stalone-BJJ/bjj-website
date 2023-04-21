@@ -35,14 +35,14 @@ const Home = () => {
             alt="Hero"
             className="hidden lg:block"
             fill
-            src="/images/image00003.jpeg"
+            src="/images/image00003.webp"
             style={{ objectFit: "cover" }}
           />
           <Image
             alt="Hero"
             className="lg:hidden"
             fill
-            src="/images/image00005.jpeg"
+            src="/images/image00005.webp"
             style={{ objectFit: "cover" }}
           />
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
@@ -94,7 +94,7 @@ const Home = () => {
           <Image
             alt="Our Schools"
             fill
-            src="/images/image00015.jpeg"
+            src="/images/image00015.webp"
             style={{ objectFit: "cover" }}
           />
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
@@ -134,14 +134,14 @@ const Home = () => {
             alt="Our Schools"
             className="hidden lg:block"
             fill
-            src="/images/image00036.jpeg"
+            src="/images/image00036.webp"
             style={{ objectFit: "cover" }}
           />
           <Image
             alt="Our Schools"
             className="lg:hidden"
             fill
-            src="/images/image00017_c.jpeg"
+            src="/images/image00017_c.webp"
             style={{ objectFit: "cover" }}
           />
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
@@ -176,7 +176,7 @@ const Home = () => {
           <Image
             alt="Get in Touch"
             fill
-            src="/images/get-in-touch.png"
+            src="/images/get-in-touch.webp"
             style={{ objectFit: "cover" }}
           />
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
