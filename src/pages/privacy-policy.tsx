@@ -1,14 +1,11 @@
 import Link from "next/link";
-import React from "react";
 import { BlackBelt } from "~/components/BlackBelt";
 import { Footer } from "~/components/Footer";
-import { Heading } from "~/components/Heading";
 import { NavBar } from "~/components/Navbar";
-import { Subheading } from "~/components/Subheading";
 
 const PrivacyPolicy = () => {
   return (
-    <React.Fragment>
+    <>
       <NavBar />
       <div className="text-center">
         <div className="flex w-full justify-center">
@@ -118,7 +115,7 @@ const PrivacyPolicy = () => {
         </div>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   );
 };
 
