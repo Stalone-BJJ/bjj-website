@@ -8,8 +8,10 @@ const TermsAndConditions = () => {
       <NavBar />
       <div className="text-center">
         <div className="flex w-full justify-center">
-          <div className="m-4 w-[540px]">
-            <h2 className="mb-2 text-5xl font-bold">Terms and Conditions</h2>
+          <div className="m-4 w-[580px] italic">
+            <h2 className="mb-2 mt-4 text-5xl font-bold lg:mt-0">
+              TERMS AND CONDITIONS
+            </h2>
             <BlackBelt />
           </div>
         </div>
