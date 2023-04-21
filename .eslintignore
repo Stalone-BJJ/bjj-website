@@ -1,6 +1,6 @@
 /node_modules
 **/*.config.cjs
-**/*.{cjs,mjs,js,json,css,scss,html,md}
+**/*.{cjs,mjs,js,json,css,scss,html,md,ico}
 .eslintrc.cjs
 /src/env.mjs
 .editorconfig
@@ -9,3 +9,4 @@ package-lock.json
 src/styles/globals.css
 /src/data/
 /public/
+/static/

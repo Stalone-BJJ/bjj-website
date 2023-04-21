@@ -6,3 +6,4 @@ package-lock.json
 .prettierignore
 /src/data/
 /public/
+/static/
