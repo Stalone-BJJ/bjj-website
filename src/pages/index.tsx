@@ -34,8 +34,16 @@ const Home = () => {
         <div className="relative h-full lg:h-[960px]">
           <Image
             alt="Hero"
+            className="hidden lg:block lg:border-b-2"
             fill
-            src="/images/hero-banner.jpg"
+            src="/images/image00003.jpeg"
+            style={{ objectFit: "cover" }}
+          />
+          <Image
+            alt="Hero"
+            className="lg:hidden"
+            fill
+            src="/images/image00005.jpeg"
             style={{ objectFit: "cover" }}
           />
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
@@ -63,10 +71,10 @@ const Home = () => {
               </p>
             </div>
             <div
-              className="my-12 w-[90%] rounded-lg bg-gray-300 p-4 lg:mt-48 lg:w-[448px]"
+              className="my-12 w-[90%] rounded-lg bg-slate-400/50 p-4 backdrop-blur-md lg:mt-48 lg:w-[448px]"
               id="contact-form"
             >
-              <h3 className="text-bold mb-2 text-center text-3xl font-bold text-black">
+              <h3 className="text-bold mb-4 text-center text-3xl font-bold">
                 BOOK YOUR FREE CLASS
               </h3>
               <ContactForm />
@@ -76,11 +84,12 @@ const Home = () => {
         <div className="relative h-full">
           <Image
             alt="Our Schools"
+            className="border-b-2"
             fill
-            src="/images/our-schools.jpg"
+            src="/images/image00015.jpeg"
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-70" />
+          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
           <div className="relative flex h-full w-full flex-col items-center justify-center">
             <div className="mt-8 flex flex-col items-center">
               <h3 className="text-5xl font-bold text-white lg:mt-0">
@@ -108,11 +117,19 @@ const Home = () => {
         <div className="relative h-full">
           <Image
             alt="Our Schools"
+            className="hidden border-b-2 lg:block"
             fill
-            src="/images/coaches.png"
+            src="/images/image00036.jpeg"
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-70" />
+          <Image
+            alt="Our Schools"
+            className="border-b-2 lg:hidden"
+            fill
+            src="/images/image00017_c.jpeg"
+            style={{ objectFit: "cover" }}
+          />
+          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
           <div className="relative flex h-full flex-col items-center justify-center">
             <div>
               <h3 className="mt-8 text-5xl font-bold text-white">
@@ -141,11 +158,12 @@ const Home = () => {
         <div className="relative h-full">
           <Image
             alt="Get in Touch"
+            className="border-b-2"
             fill
             src="/images/get-in-touch.png"
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-70" />
+          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
           <div className="relative flex h-full flex-col items-center justify-center">
             <div>
               <h3 className="mt-8 text-5xl font-bold text-white">
