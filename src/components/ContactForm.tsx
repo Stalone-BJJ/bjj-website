@@ -63,7 +63,7 @@ export const ContactForm = () => {
     <form onSubmit={handleSubmit(handleFormSubmission)}>
       <div className="mb-4">
         <label
-          className="mb-2 block text-2xl text-gray-900 lg:text-sm lg:font-medium"
+          className="mb-2 block text-2xl lg:text-sm lg:font-medium"
           htmlFor="class"
         >
           Class
@@ -88,7 +88,7 @@ export const ContactForm = () => {
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-2xl text-gray-900 lg:text-sm lg:font-medium"
+          className="mb-2 block text-2xl lg:text-sm lg:font-medium"
           htmlFor="name"
         >
           Name
@@ -108,7 +108,7 @@ export const ContactForm = () => {
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-2xl text-gray-900 lg:text-sm lg:font-medium"
+          className="mb-2 block text-2xl lg:text-sm lg:font-medium"
           htmlFor="phone"
         >
           Phone number
@@ -128,7 +128,7 @@ export const ContactForm = () => {
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-2xl text-gray-900 lg:text-sm lg:font-medium"
+          className="mb-2 block text-2xl lg:text-sm lg:font-medium"
           htmlFor="email"
         >
           Email address
@@ -148,7 +148,7 @@ export const ContactForm = () => {
       </div>
       <div className="mb-4">
         <label
-          className="mb-2 block text-2xl text-gray-900 lg:text-sm lg:font-medium"
+          className="mb-2 block text-2xl lg:text-sm lg:font-medium"
           htmlFor="info"
         >
           Additional Information / Questions
@@ -179,7 +179,7 @@ export const ContactForm = () => {
         )}
       </div>
       <button
-        className="mt-4 w-full rounded-lg bg-blue-700 px-5 py-2.5 text-center text-2xl font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 lg:text-sm"
+        className="mt-4 w-full rounded-lg bg-blue-800 px-5 py-2.5 text-center text-2xl font-medium text-white hover:bg-blue-900 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-700 dark:hover:bg-blue-800 dark:focus:ring-blue-800 lg:text-sm"
         type="submit"
       >
         Submit

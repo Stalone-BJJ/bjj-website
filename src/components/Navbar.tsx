@@ -3,17 +3,18 @@ import Image from "next/image";
 
 export const NavBar = () => {
   return (
-    <nav className="sticky top-0 z-10 border-gray-200 bg-white px-2 py-2.5 dark:bg-gray-900 sm:px-4">
+    <nav className="sticky top-0 z-10 border-b-2 border-red-600 bg-black px-2 py-2.5 sm:px-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <Link className="flex items-center" href="/">
           <Image
             alt="BJJ Logo"
+            className="absolute top-2"
             height={100}
-            src="https://img.logoipsum.com/290.svg"
+            src="/images/thumbnail_stalone-logo-1.png"
             width={100}
           />
-          <span className="ml-5 self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            Chorley BJJ Academy
+          <span className="my-4 ml-32 self-center whitespace-nowrap text-xl font-semibold dark:text-white lg:my-0">
+            STALONE BJJ ACADEMY
           </span>
         </Link>
         <button
