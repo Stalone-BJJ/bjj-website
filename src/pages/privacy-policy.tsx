@@ -1,19 +1,18 @@
 import Link from "next/link";
-import React from "react";
 import { BlackBelt } from "~/components/BlackBelt";
 import { Footer } from "~/components/Footer";
-import { Heading } from "~/components/Heading";
 import { NavBar } from "~/components/Navbar";
-import { Subheading } from "~/components/Subheading";
 
 const PrivacyPolicy = () => {
   return (
-    <React.Fragment>
+    <>
       <NavBar />
       <div className="text-center">
         <div className="flex w-full justify-center">
-          <div className="m-4 w-[340px]">
-            <h2 className="mb-2 text-5xl font-bold">Privacy Policy</h2>
+          <div className="m-4 w-[380px]">
+            <h2 className="mb-2 mt-4 text-5xl font-bold italic lg:mt-0">
+              PRIVACY POLICY
+            </h2>
             <BlackBelt />
           </div>
         </div>
@@ -118,7 +117,7 @@ const PrivacyPolicy = () => {
         </div>
       </div>
       <Footer />
-    </React.Fragment>
+    </>
   );
 };
 

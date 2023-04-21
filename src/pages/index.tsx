@@ -100,7 +100,7 @@ const Home = () => {
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
           <div className="relative flex h-full w-full flex-col items-center justify-center">
             <div className="mt-8 flex flex-col items-center">
-              <h3 className="text-5xl font-bold text-white lg:mt-0">
+              <h3 className="text-5xl font-bold italic text-white lg:mt-0">
                 OUR SCHOOL
               </h3>
               <BlackBelt />
@@ -147,7 +147,7 @@ const Home = () => {
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
           <div className="relative flex h-full flex-col items-center justify-center">
             <div>
-              <h3 className="mt-8 text-5xl font-bold text-white">
+              <h3 className="mt-8 text-5xl font-bold italic text-white">
                 MEET OUR INSTRUCTORS
               </h3>
               <BlackBelt />
@@ -182,7 +182,7 @@ const Home = () => {
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
           <div className="relative flex h-full flex-col items-center justify-center">
             <div>
-              <h3 className="mt-8 text-5xl font-bold text-white">
+              <h3 className="mt-8 text-5xl font-bold italic text-white">
                 GET IN TOUCH
               </h3>
               <BlackBelt />

@@ -8,12 +8,19 @@ export const NavBar = () => {
         <Link className="flex items-center" href="/">
           <Image
             alt="BJJ Logo"
-            className="absolute top-2"
+            className="absolute top-0 hidden border-red-600 lg:block"
+            height={150}
+            src="/images/thumbnail_stalone-logo-1.png"
+            width={150}
+          />
+          <Image
+            alt="BJJ Logo"
+            className="absolute top-2 border-red-600 lg:hidden"
             height={100}
             src="/images/thumbnail_stalone-logo-1.png"
             width={100}
           />
-          <span className="my-4 ml-32 self-center whitespace-nowrap text-xl font-semibold dark:text-white lg:my-0">
+          <span className="my-4 ml-28 self-center whitespace-nowrap text-xl font-semibold dark:text-white lg:my-0 lg:ml-40">
             STALONE BJJ ACADEMY
           </span>
         </Link>
