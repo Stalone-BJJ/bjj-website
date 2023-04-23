@@ -1,9 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export const NavBar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const router = useRouter();
+  const pathName = router.pathname;
 
   return (
     <nav className="sticky top-0 z-10 border-b-2 border-red-600 bg-black px-2 py-2.5 sm:px-4">
@@ -56,7 +59,9 @@ export const NavBar = () => {
               <li className="mb-4">
                 <Link
                   aria-current="page"
-                  className="text-xl text-white"
+                  className={`text-xl ${
+                    pathName === "/" ? "font-bold text-red-600" : "text-white"
+                  }`}
                   href="/"
                 >
                   HOME
@@ -65,7 +70,11 @@ export const NavBar = () => {
               <li className="mb-4">
                 <Link
                   aria-current="page"
-                  className="text-xl text-white"
+                  className={`text-xl ${
+                    pathName === "/schedule"
+                      ? "font-bold text-red-600"
+                      : "text-white"
+                  }`}
                   href="/schedule"
                 >
                   SCHEDULE
@@ -74,7 +83,11 @@ export const NavBar = () => {
               <li className="mb-4">
                 <Link
                   aria-current="page"
-                  className="text-xl text-white"
+                  className={`text-xl ${
+                    pathName === "/contact"
+                      ? "font-bold text-red-600"
+                      : "text-white"
+                  }`}
                   href="/contact"
                 >
                   CONTACT
