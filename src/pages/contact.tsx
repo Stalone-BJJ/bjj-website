@@ -1,33 +1,45 @@
-import React from "react";
 import { ContactForm } from "~/components/ContactForm";
 import { Footer } from "~/components/Footer";
-import { Heading } from "~/components/Heading";
 import { NavBar } from "~/components/Navbar";
-import { Subheading } from "~/components/Subheading";
 import { Map } from "~/components/Map";
+import Image from "next/image";
+import { BlackBelt } from "~/components/BlackBelt";
 
 const Contact = () => {
   return (
-    <React.Fragment>
+    <>
       <NavBar />
-      <div className=" m-20 text-center">
-        <Heading>Contact Us</Heading>
-        <Subheading>
-          If you have any questions or would like to enquire about trying one of
-          our classes, fill in the form below and we will get back to you as
-          soon as possible.
-        </Subheading>
-      </div>
-      <div className="m-20 flex">
-        <div className=" mr-2 h-3/6 w-6/12" id="contact-form">
-          <ContactForm />
+      <div className="flex flex-col">
+        <div className="relative text-center">
+          <div className="h-[180px] w-full">
+            <Image
+              alt=""
+              className="object-cover"
+              fill
+              src="/images/get-in-touch.webp"
+            />
+            <div className="absolute top-0 h-full w-full bg-gray-900 opacity-80" />
+          </div>
+          <div className="absolute top-0 flex h-full w-full items-center justify-center text-white">
+            <div className="m-4 w-[300px]">
+              <h2 className="mb-2 text-5xl font-bold italic">CONTACT US</h2>
+              <BlackBelt />
+            </div>
+          </div>
         </div>
-        <div className="ml-2 h-3/6 w-6/12 bg-slate-200">
-          <Map />
+        <div className="flex w-full flex-col lg:flex-row">
+          <div className="w-1/2 p-8" id="contact-form">
+            <ContactForm />
+          </div>
+          <div className="ml-2 h-[480px] bg-slate-200">
+            <Map />
+          </div>
         </div>
       </div>
-      <Footer />
-    </React.Fragment>
+      <div className="lg:absolute lg:bottom-0 lg:w-full">
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -1,10 +1,9 @@
+import GoogleMaps from "google-map-react";
+
 export const Map = () => {
   return (
-    <div>
-      <h2>
-        This is where the map will be rendered showing the location of the
-        academy. Will use either react-google-maps or MapBox
-      </h2>
+    <div className="h-full w-full">
+      <GoogleMaps />
     </div>
   );
 };
