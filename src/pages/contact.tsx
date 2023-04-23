@@ -9,10 +9,13 @@ import Head from "next/head";
 import pagetitle from "~/utils/pagetitle";
 
 const Contact = () => {
+  const title = pagetitle("Contact");
   return (
     <React.Fragment>
       <Head>
-        <title>{pagetitle("Contact")}</title>
+        <title>{title}</title>
+        <meta content={title} property="og:title" />
+        <meta content={title} name="twitter:title" />
       </Head>
       <NavBar />
       <div className=" m-20 text-center">

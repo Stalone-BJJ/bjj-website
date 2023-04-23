@@ -6,10 +6,13 @@ import Head from "next/head";
 import pagetitle from "~/utils/pagetitle";
 
 const Schedule = () => {
+  const title = pagetitle("Schedule");
   return (
     <React.Fragment>
       <Head>
-        <title>{pagetitle("Contact")}</title>
+        <title>{title}</title>
+        <meta content={title} property="og:title" />
+        <meta content={title} name="twitter:title" />
       </Head>
       <NavBar />
       <div className="mb-20 mt-10 flex justify-center">

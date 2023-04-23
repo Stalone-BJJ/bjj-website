@@ -13,7 +13,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   const { asPath } = useRouter();
 
-  const title = process.env.NEXT_PUBLIC_PAGETITLE;
+  const title = pagetitle();
   const description =
     "Brazilian Jiu-Jitsu for everyone. Getting started at Stalone BJJ Academy is easy. Book your free trial class today.";
   const img = "/images/og2.png";
@@ -23,10 +23,10 @@ const MyApp: AppType<{ session: Session | null }> = ({
   return (
     <>
       <Head>
-        <title>{pagetitle()}</title>
         <link href="/static/favicon.ico" rel="shortcut icon" />
         <meta content="website" property="og:type" />
         <meta content="summary_large_image" name="twitter:card" />
+        <title>{title}</title>
         <meta content={title} property="og:title" />
         <meta content={title} name="twitter:title" />
         <meta content={description} name="description" />

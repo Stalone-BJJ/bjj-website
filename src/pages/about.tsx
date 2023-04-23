@@ -10,10 +10,13 @@ import Head from "next/head";
 import pagetitle from "~/utils/pagetitle";
 
 const About = () => {
+  const title = pagetitle("About");
   return (
     <React.Fragment>
       <Head>
-        <title>{pagetitle("About")}</title>
+        <title>{title}</title>
+        <meta content={title} property="og:title" />
+        <meta content={title} name="twitter:title" />
       </Head>
       <NavBar />
       <div className="m-20 text-center">
