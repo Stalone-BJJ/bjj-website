@@ -6,10 +6,15 @@ import { SectionHeading } from "~/components/SectionHeading";
 import { Subheading } from "~/components/Subheading";
 import { ContentSection } from "~/components/ContentSection";
 import { Carousel } from "~/components/Carousel";
+import Head from "next/head";
+import pagetitle from "~/utils/pagetitle";
 
 const About = () => {
   return (
     <React.Fragment>
+      <Head>
+        <title>{pagetitle("About")}</title>
+      </Head>
       <NavBar />
       <div className="m-20 text-center">
         <Heading>About Us</Heading>

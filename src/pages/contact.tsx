@@ -5,10 +5,14 @@ import { Heading } from "~/components/Heading";
 import { NavBar } from "~/components/Navbar";
 import { Subheading } from "~/components/Subheading";
 import { Map } from "~/components/Map";
+import Head from "next/head";
 
 const Contact = () => {
   return (
     <React.Fragment>
+      <Head>
+        <title>{process.env.NEXT_PUBLIC_PAGETITLE} | Contact</title>
+      </Head>
       <NavBar />
       <div className=" m-20 text-center">
         <Heading>Contact Us</Heading>
