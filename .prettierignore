@@ -1,4 +1,5 @@
 .next
+.env.example
 .eslintignore
 package.json
 package-lock.json

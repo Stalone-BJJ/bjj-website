@@ -5,10 +5,18 @@ import { Heading } from "~/components/Heading";
 import { NavBar } from "~/components/Navbar";
 import { Subheading } from "~/components/Subheading";
 import { Map } from "~/components/Map";
+import Head from "next/head";
+import pagetitle from "~/utils/pagetitle";
 
 const Contact = () => {
+  const title = pagetitle("Contact");
   return (
     <React.Fragment>
+      <Head>
+        <title>{title}</title>
+        <meta content={title} property="og:title" />
+        <meta content={title} name="twitter:title" />
+      </Head>
       <NavBar />
       <div className=" m-20 text-center">
         <Heading>Contact Us</Heading>
