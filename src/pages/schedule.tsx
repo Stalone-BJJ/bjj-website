@@ -30,7 +30,7 @@ const Schedule = () => {
             alt=""
             height={0}
             src="/images/timetable/tt-head.jpg"
-            width={isMobileView ? 400 : 1200}
+            width={isMobileView ? 600 : 1200}
           />
         </div>
         <div className="mb-14 flex flex-wrap justify-center">
