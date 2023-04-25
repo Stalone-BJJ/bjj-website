@@ -45,7 +45,7 @@ const Home = () => {
             src="/images/image00005.webp"
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
+          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-80" />
           <div className="absolute top-0 mt-4 flex w-full justify-center">
             <div className="text-center text-white">
               <Image
@@ -97,7 +97,7 @@ const Home = () => {
             src="/images/image00015.webp"
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
+          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-80" />
           <div className="relative flex h-full w-full flex-col items-center justify-center">
             <div className="mt-8 flex flex-col items-center">
               <h3 className="text-5xl font-bold italic text-white lg:mt-0">
@@ -144,7 +144,7 @@ const Home = () => {
             src="/images/image00017_c.webp"
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
+          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-80" />
           <div className="relative flex h-full flex-col items-center justify-center">
             <div>
               <h3 className="mt-8 text-5xl font-bold italic text-white">
@@ -179,7 +179,7 @@ const Home = () => {
             src="/images/get-in-touch.webp"
             style={{ objectFit: "cover" }}
           />
-          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-60" />
+          <div className="absolute top-0 h-full w-full bg-gray-900 opacity-80" />
           <div className="relative flex h-full flex-col items-center justify-center">
             <div>
               <h3 className="mt-8 text-5xl font-bold italic text-white">
