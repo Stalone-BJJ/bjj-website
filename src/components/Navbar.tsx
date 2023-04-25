@@ -33,7 +33,7 @@ export const NavBar = () => {
         <button
           aria-controls="navbar-default"
           aria-expanded="false"
-          className="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
+          className="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden"
           data-collapse-toggle="navbar-default"
           onClick={() => setShowMenu(!showMenu)}
           type="button"
@@ -54,7 +54,7 @@ export const NavBar = () => {
           </svg>
         </button>
         {showMenu && (
-          <div className="w-full md:hidden" id="navbar-default">
+          <div className="w-full lg:hidden" id="navbar-default">
             <ul className="mt-4 flex flex-col items-center justify-center text-center">
               <li className="mb-4">
                 <Link
@@ -93,14 +93,14 @@ export const NavBar = () => {
             </ul>
           </div>
         )}
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="mt-4 flex flex-col p-4 md:mt-0 md:flex-row md:space-x-8 md:font-medium">
+        <div className="hidden w-full lg:block lg:w-auto" id="navbar-default">
+          <ul className="mt-4 flex flex-col p-4 lg:mt-0 lg:flex-row lg:space-x-8 lg:font-medium">
             <li>
               <Link
                 aria-current="page"
                 className={`${
                   pathName === "/" ? "font-bold text-red-600" : "text-white"
-                } block rounded py-2 pl-3 pr-4 hover:text-red-600 md:border-0 md:p-0`}
+                } block rounded py-2 pl-3 pr-4 hover:text-red-600 lg:border-0 lg:p-0`}
                 href="/"
               >
                 HOME
@@ -108,7 +108,7 @@ export const NavBar = () => {
             </li>
             {/* <li>
               <Link
-                className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
+                className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-blue-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                 href="/about"
               >
                 About
@@ -117,7 +117,7 @@ export const NavBar = () => {
             {/* <li>
               <Link
                 aria-current="page"
-                className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
+                className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-blue-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                 href="/news"
               >
                 News
@@ -125,7 +125,7 @@ export const NavBar = () => {
             </li> */}
             {/* <li>
               <Link
-                className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white"
+                className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-blue-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
                 href="/gallery"
               >
                 Gallery
@@ -137,7 +137,7 @@ export const NavBar = () => {
                   pathName === "/schedule"
                     ? "font-bold text-red-600"
                     : "text-white"
-                } block rounded py-2 pl-3 pr-4 hover:text-red-600 md:border-0 md:p-0`}
+                } block rounded py-2 pl-3 pr-4 hover:text-red-600 lg:border-0 lg:p-0`}
                 href="/schedule"
               >
                 SCHEDULE
@@ -149,7 +149,7 @@ export const NavBar = () => {
                   pathName === "/contact"
                     ? "font-bold text-red-600"
                     : "text-white"
-                } block rounded py-2 pl-3 pr-4 hover:text-red-600 md:border-0 md:p-0`}
+                } block rounded py-2 pl-3 pr-4 hover:text-red-600 lg:border-0 lg:p-0`}
                 href="/contact"
               >
                 CONTACT

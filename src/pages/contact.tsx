@@ -69,7 +69,7 @@ const Contact = () => {
             <div className="absolute top-0 h-full w-full bg-gray-900 opacity-80" />
           </div>
           <div className="flex h-full w-full flex-col lg:absolute lg:top-0 lg:flex-row lg:justify-center">
-            <div className="mt-4 flex w-full items-center justify-center lg:mt-0 lg:w-1/2">
+            <div className="mt-8 flex w-full items-center justify-center lg:mt-0 lg:w-1/2">
               <div
                 className="mx-8 flex w-full items-center justify-center rounded-lg bg-slate-400/50 p-4 backdrop-blur-md sm:mx-0 sm:w-[448px] lg:relative lg:my-auto lg:ml-4"
                 id="contact-form"

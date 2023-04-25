@@ -7,7 +7,7 @@ const Schedule = () => {
   return (
     <React.Fragment>
       <NavBar />
-      <div className="">
+      <div id="timetable">
         <div className="mx-10 my-8 flex justify-center">
           <Image
             alt=""

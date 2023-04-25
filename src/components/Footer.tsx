@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="w-full border-t-2 border-red-600 bg-black shadow">
+    <footer className="sticky bottom-0 w-full border-t-2 border-red-600 bg-black shadow">
       <div className="container mx-auto flex w-full flex-col items-center justify-center p-4 md:flex-row md:justify-between md:p-6">
         <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
           &copy; 2023{" "}

@@ -37,6 +37,12 @@
   }
 }
 
+@media (min-width: 1224px) {
+  #timetable {
+    height: calc(100vh - 180px);
+  }
+}
+
 body {
   @apply font-rubik;
   min-width: 640px;
