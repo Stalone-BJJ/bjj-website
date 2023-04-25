@@ -2,26 +2,46 @@ import React from "react";
 import { Footer } from "~/components/Footer";
 import { NavBar } from "~/components/Navbar";
 import Image from "next/image";
-import Head from "next/head";
-import pagetitle from "~/utils/pagetitle";
 
 const Schedule = () => {
-  const title = pagetitle("Schedule");
   return (
     <React.Fragment>
-      <Head>
-        <title>{title}</title>
-        <meta content={title} property="og:title" />
-        <meta content={title} name="twitter:title" />
-      </Head>
       <NavBar />
-      <div className="mb-20 mt-10 flex justify-center">
-        <Image
-          alt="timetable"
-          height={1500}
-          src="/stalone-bjj-timetable.JPG"
-          width={1500}
-        ></Image>
+      <div className="">
+        <div className="mx-10 my-8 flex justify-center">
+          <Image
+            alt=""
+            height={0}
+            src="/images/timetable/tt-head.jpg"
+            width={1200}
+          ></Image>
+        </div>
+        <div className="mb-14 flex flex-wrap justify-center">
+          <div className="mx-1">
+            <Image
+              alt=""
+              height={0}
+              src="/images/timetable/tt-m-t.jpg"
+              width={400}
+            ></Image>
+          </div>
+          <div className="mx-1">
+            <Image
+              alt=""
+              height={0}
+              src="/images/timetable/tt-w-t.jpg"
+              width={400}
+            ></Image>
+          </div>
+          <div className="mx-1">
+            <Image
+              alt=""
+              height={0}
+              src="/images/timetable/tt-f-s.jpg"
+              width={400}
+            ></Image>
+          </div>
+        </div>
       </div>
       <Footer />
     </React.Fragment>
