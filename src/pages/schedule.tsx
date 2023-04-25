@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Footer } from "~/components/Footer";
 import { NavBar } from "~/components/Navbar";
 import Image from "next/image";
 
 const Schedule = () => {
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIsMobileView(true);
+      } else {
+        setIsMobileView(false);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <React.Fragment>
       <NavBar />
@@ -13,8 +30,8 @@ const Schedule = () => {
             alt=""
             height={0}
             src="/images/timetable/tt-head.jpg"
-            width={1200}
-          ></Image>
+            width={isMobileView ? 600 : 1200}
+          />
         </div>
         <div className="mb-14 flex flex-wrap justify-center">
           <div className="mx-1">
