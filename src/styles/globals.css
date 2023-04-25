@@ -23,6 +23,26 @@
   src: url("/fonts/rubik-italic.ttf");
 }
 
+@import url("~leaflet/dist/leaflet.css");
+
+.leaflet-container {
+  width: 480px;
+  height: 480px;
+  z-index: 0;
+}
+
+@media (min-width: 1024px) {
+  #contact-us-hero {
+    height: calc(100vh - 530px);
+  }
+}
+
+@media (min-width: 1224px) {
+  #timetable {
+    height: calc(100vh - 180px);
+  }
+}
+
 body {
   @apply font-rubik;
   min-width: 640px;
