@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useRef, useState } from "react";
 import HCAPTCHA from "@hcaptcha/react-hcaptcha";
+import { BlackBelt } from "./BlackBelt";
 
 interface FormValues {
   name: string;
@@ -60,7 +61,18 @@ export const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleFormSubmission)}>
+    <form
+      className="w-full text-white"
+      onSubmit={handleSubmit(handleFormSubmission)}
+    >
+      <div className="flex w-full flex-col items-center">
+        <div className="mb-4 w-[360px]">
+          <h3 className="mb-2 text-center text-3xl font-bold italic text-white">
+            BOOK YOUR FREE CLASS
+          </h3>
+          <BlackBelt />
+        </div>
+      </div>
       <div className="mb-4">
         <label
           className="mb-2 block text-2xl lg:text-sm lg:font-medium"
