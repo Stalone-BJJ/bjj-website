@@ -1,10 +1,10 @@
 import { ContactForm } from "~/components/ContactForm";
 import { Footer } from "~/components/Footer";
 import { NavBar } from "~/components/Navbar";
-import Image from "next/image";
 import { BlackBelt } from "~/components/BlackBelt";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { CldImage } from "next-cloudinary";
 
 const Contact = () => {
   const Map = dynamic(() => import("~/components/Map").then((mod) => mod.Map), {
@@ -17,11 +17,11 @@ const Contact = () => {
       <div className="flex flex-col">
         <div className="relative border-b-2 border-red-600 text-center">
           <div className="h-[380px] w-full">
-            <Image
+            <CldImage
               alt=""
               className="object-cover"
               fill
-              src="/images/get-in-touch.webp"
+              src="get-in-touch_spzr5m"
             />
             <div className="absolute top-0 h-full w-full bg-gray-900 opacity-90" />
           </div>
@@ -60,11 +60,11 @@ const Contact = () => {
         </div>
         <div className="relative">
           <div className="h-full w-full" id="contact-us-hero">
-            <Image
+            <CldImage
               alt=""
               className="object-cover"
               fill
-              src="/images/image00029.webp"
+              src="image00029_es4xlg"
             />
             <div className="absolute top-0 h-full w-full bg-gray-900 opacity-80" />
           </div>

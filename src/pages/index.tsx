@@ -2,7 +2,6 @@ import React from "react";
 import { Footer } from "~/components/Footer";
 import { NavBar } from "~/components/Navbar";
 import { Subheading } from "~/components/Subheading";
-import Image from "next/image";
 import { ContactForm } from "~/components/ContactForm";
 import { BlackBelt } from "~/components/BlackBelt";
 import { Instructor } from "~/components/Instructor";

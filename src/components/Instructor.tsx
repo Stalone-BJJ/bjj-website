@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { useEffect, useState } from "react";
 
 export interface InstructorProps {
@@ -24,7 +24,7 @@ export const Instructor = ({
 
   return (
     <div className="mt-4 mb-8 text-white">
-      <Image
+      <CldImage
         alt=""
         height={isMobile ? 360 : 240}
         src={image}
