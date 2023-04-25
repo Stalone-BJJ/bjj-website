@@ -8,6 +8,7 @@ import { BlackBelt } from "~/components/BlackBelt";
 import { Instructor } from "~/components/Instructor";
 import instructors from "~/data/instructors.json";
 import Link from "next/link";
+import { CldImage } from "next-cloudinary";
 
 type Instructor = {
   image: string;
@@ -31,29 +32,26 @@ const Home = () => {
       <NavBar />
       <div className="flex scroll-mt-[72px] flex-col" id="hero-banner">
         <div className="relative h-full border-b-2 border-red-600 lg:h-[960px]">
-          <Image
+          <CldImage
             alt="Hero"
-            className="hidden lg:block"
+            className="hidden object-cover lg:block"
             fill
-            src="/images/image00003.webp"
-            style={{ objectFit: "cover" }}
+            src="image00003_mbbn0c"
           />
-          <Image
+          <CldImage
             alt="Hero"
-            className="lg:hidden"
+            className="object-cover lg:hidden"
             fill
-            src="/images/image00005.webp"
-            style={{ objectFit: "cover" }}
+            src="image00005"
           />
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-80" />
           <div className="absolute top-0 mt-4 flex w-full justify-center">
             <div className="text-center text-white">
-              <Image
+              <CldImage
                 alt="Hero"
-                className="-mb-4 rounded bg-white"
+                className="-mb-4 rounded bg-white object-cover"
                 height={150}
-                src="/images/thumbnail_stalone-header.png"
-                style={{ objectFit: "cover" }}
+                src="thumbnail_stalone-header_vcc2xx"
                 width={450}
               />
               <Subheading>
@@ -88,11 +86,11 @@ const Home = () => {
           </div>
         </div>
         <div className="relative h-full border-b-2 border-red-600">
-          <Image
+          <CldImage
             alt="Our Schools"
+            className="object-cover"
             fill
-            src="/images/image00015.webp"
-            style={{ objectFit: "cover" }}
+            src="image00015_gddgz1"
           />
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-90" />
           <div className="relative flex h-full w-full flex-col items-center justify-center">
@@ -117,29 +115,27 @@ const Home = () => {
               refreshments<span className="text-red-600">,</span> changing
               facilities and more<span className="text-red-600">.</span>
             </p>
-            <Image
+            <CldImage
               alt="Cutting Shapes"
               className="my-8 rounded bg-red-600"
               height={120}
-              src="/images/chorley-school.svg"
+              src="chorley-school_uunflm"
               width={120}
             />
           </div>
         </div>
         <div className="relative h-full border-b-2 border-red-600">
-          <Image
+          <CldImage
             alt="Our Schools"
-            className="hidden lg:block"
+            className="hidden object-cover lg:block"
             fill
-            src="/images/image00036.webp"
-            style={{ objectFit: "cover" }}
+            src="image00036_qyntvw"
           />
-          <Image
+          <CldImage
             alt="Our Schools"
-            className="lg:hidden"
+            className="object-cover lg:hidden"
             fill
-            src="/images/image00017_c.webp"
-            style={{ objectFit: "cover" }}
+            src="image00017_c_te4csx"
           />
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-80" />
           <div className="relative flex h-full flex-col items-center justify-center">
@@ -170,11 +166,11 @@ const Home = () => {
           </div>
         </div>
         <div className="relative h-full">
-          <Image
+          <CldImage
             alt="Get in Touch"
+            className="object-cover"
             fill
-            src="/images/get-in-touch.webp"
-            style={{ objectFit: "cover" }}
+            src="get-in-touch_spzr5m"
           />
           <div className="absolute top-0 h-full w-full bg-gray-900 opacity-90" />
           <div className="relative flex h-full flex-col items-center justify-center">
