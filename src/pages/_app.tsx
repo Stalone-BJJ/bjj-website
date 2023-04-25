@@ -23,7 +23,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
   return (
     <>
       <Head>
-        <link href="/static/favicon.ico" rel="shortcut icon" />
+        <link href="/favicon.ico" rel="shortcut icon" />
         <meta content="website" property="og:type" />
         <meta content="summary_large_image" name="twitter:card" />
         <title>{title}</title>
