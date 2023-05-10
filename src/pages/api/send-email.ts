@@ -39,7 +39,7 @@ const sendEmail = async (
       `,
       replyTo: email,
       subject: `Class Trial Request ${new Date().toLocaleDateString()}`,
-      to: "stalonebjj@gmail.com",
+      to: "stalonebjjacademy@gmail.com",
     });
 
     res.status(200).send({ message: "Email sent", success: true });
