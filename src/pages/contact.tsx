@@ -33,7 +33,7 @@ const Contact = () => {
                   <BlackBelt />
                 </div>
               </div>
-              <p className="mt-8 mb-4 w-[480px] text-left text-xl text-white lg:w-[720px] lg:text-lg">
+              <p className="mb-4 mt-8 w-[480px] text-left text-xl text-white lg:w-[720px] lg:text-lg">
                 Please feel free to visit us at our academy. If visiting for the
                 first time we recommend booking in so then you can be shown
                 around and all questions answered.
@@ -58,8 +58,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="relative">
-          <div className="h-full w-full" id="contact-us-hero">
+        <div className="relative ">
+          <div
+            className="mb-20 mt-20 w-full lg:min-h-[720px]"
+            id="contact-us-hero"
+          >
             <Image
               alt=""
               className="object-cover"
@@ -68,16 +71,16 @@ const Contact = () => {
             />
             <div className="absolute top-0 h-full w-full bg-gray-900 opacity-80" />
           </div>
-          <div className="flex h-full w-full flex-col lg:absolute lg:top-0 lg:flex-row lg:justify-center">
-            <div className="mt-8 flex w-full items-center justify-center lg:mt-0 lg:w-1/2">
+          <div className="flex w-full flex-col lg:absolute lg:top-24 lg:flex-row lg:justify-center">
+            <div className="mt-8 flex items-center justify-center lg:mr-20 lg:mt-0">
               <div
-                className="mx-8 flex w-full items-center justify-center rounded-lg bg-slate-400/50 p-4 backdrop-blur-md sm:mx-0 sm:w-[448px] lg:relative lg:my-auto lg:ml-4"
+                className="mx-8 flex w-full items-center justify-center rounded-lg bg-slate-400/50 p-4 backdrop-blur-md sm:mx-0 sm:w-[448px] lg:relative lg:my-auto"
                 id="contact-form"
               >
                 <ContactForm />
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center lg:ml-20">
               <div className="relative mt-8 w-[160px] lg:mt-0">
                 <h3 className="mb-2 text-center text-4xl font-bold italic text-white">
                   VISIT US
