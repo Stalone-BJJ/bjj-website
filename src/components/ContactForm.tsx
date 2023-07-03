@@ -19,7 +19,7 @@ interface HCaptchaResponse extends Response {
 
 export const ContactForm = () => {
   const [hCaptchaToken, setHCaptchaToken] = useState("");
-  const [showSuccessMessage, setShowSuccessMessage] = useState(true);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const hCaptchaRef = useRef<HCAPTCHA | null>(null);
   const {
     register,
@@ -53,7 +53,10 @@ export const ContactForm = () => {
         headers: { "Content-Type": "application/json" },
         method: "POST",
       });
-      const emailJson = (await emailResponse.json()) as Record<string, any>;
+      const emailJson = (await emailResponse.json()) as {
+        message: string;
+        success: boolean;
+      };
 
       if (emailJson.success) {
         setShowSuccessMessage(true);
