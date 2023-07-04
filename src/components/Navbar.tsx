@@ -90,6 +90,18 @@ export const NavBar = () => {
                   CONTACT
                 </Link>
               </li>
+              <li className="mb-4">
+                <Link
+                  className={`text-xl ${
+                    pathName === "/gallery"
+                      ? "font-bold text-red-600"
+                      : "text-white"
+                  }`}
+                  href="/gallery"
+                >
+                  GALLERY
+                </Link>
+              </li>
             </ul>
           </div>
         )}
@@ -106,31 +118,18 @@ export const NavBar = () => {
                 HOME
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link
-                className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-blue-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
-                href="/about"
-              >
-                About
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link
-                aria-current="page"
-                className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-blue-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
-                href="/news"
-              >
-                News
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link
-                className="block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:p-0 lg:hover:bg-transparent lg:hover:text-blue-700 lg:dark:hover:bg-transparent lg:dark:hover:text-white"
+                className={`${
+                  pathName === "/gallery"
+                    ? "font-bold text-red-600"
+                    : "text-white"
+                } block rounded py-2 pl-3 pr-4 hover:text-red-600 lg:border-0 lg:p-0`}
                 href="/gallery"
               >
-                Gallery
+                GALLERY
               </Link>
-            </li> */}
+            </li>
             <li>
               <Link
                 className={`${
