@@ -39,7 +39,33 @@ const sendEmail = async (
       `,
       replyTo: email,
       subject: `Class Trial Request ${new Date().toLocaleDateString()}`,
-      to: "stalonebjj@gmail.com",
+      to: "stalonebjjacademy@gmail.com",
+    });
+
+    await sendgrid.send({
+      from: "contact@stalonebjj.co.uk",
+      html: `
+        <h3>We'll be in touch soon.</h3>
+        <p>Thanks for your interest in Stalone BJJ. We'll be in touch soon to arrange your trial class.</p>
+        <p>Here's the information you provided: please double check to ensure it's correct.</p>
+        <p>
+          Name: ${name}
+          <br />
+          Email: ${email}
+          <br />
+          Phone: ${number}
+          <br />
+          Class: ${selectedClass}
+          <br />
+          Message: ${info}
+        </p>
+        <p>You can reply to this email directly to contact us, or if you need to amend any of the details above.</p>
+        <p>We're looking forward to welcoming you in to our school.</p>
+        <p> - Stalone BJJ Team</p>
+      `,
+      replyTo: "contact@stalonebjj.co.uk",
+      subject: `Thanks for your interest in Stalone BJJ`,
+      to: email,
     });
 
     res.status(200).send({ message: "Email sent", success: true });
