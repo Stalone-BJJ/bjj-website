@@ -1,4 +1,5 @@
 import Script from "next/script";
+
 declare global {
   interface Window {
     beholdWidgets: {
@@ -15,7 +16,7 @@ export const BeholdInstagram = () => {
   };
 
   return (
-    <div className="mt-10 mb-20">
+    <div className="mt-10 w-screen min-w-[600px] px-4">
       <figure data-behold-id="xM3hlt47kIo8RvsODLGZ"></figure>
       <Script
         onReady={onReady}

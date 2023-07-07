@@ -47,3 +47,11 @@ body {
   @apply font-rubik;
   min-width: 640px;
 }
+
+@media (max-width: 640px) {
+  aside.behold-pg-container,
+  div.behold-pg-inner,
+  div.behold-ps-container {
+    height: 2000px !important;
+  }
+}
